@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_app">
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        >
+        <LinearLayout
+            android:id="@+id/ll_bck"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:src="@drawable/cross"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/top_bar_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="FILL THE DETAILS"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:paddingRight="60dp"
+        android:paddingLeft="60dp"
+        android:gravity="center">
+
+
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/rl_number"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_background"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_width="13dp"
+                android:layout_height="14dp"
+                android:id="@+id/phnumberimg"
+                android:background="@drawable/ic_action_name_ph"/>
+            <EditText
+                android:paddingLeft="15dp"
+                android:layout_toRightOf="@+id/phnumberimg"
+                android:layout_centerVertical="true"
+                android:textColorHint="#D1D5DB"
+                android:hint="@string/ph_number"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="16sp"
+                android:background="@null"
+                android:id="@+id/ph"
+                android:textColor="#EFEFEF"
+                android:inputType="number"
+                android:maxLength="10"
+
+                />
+
+        </RelativeLayout>
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/errortxt6"
+            android:layout_marginTop="10dp"
+            android:text="@string/enter_ph_number"
+            android:layout_below="@+id/rl_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/rl_gender"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/errortxt6"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_background"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:id="@+id/gendericon"
+                android:background="@drawable/love"/>
+            <Spinner
+                android:paddingLeft="15dp"
+                android:layout_toRightOf="@+id/gendericon"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:id="@+id/gender_spinner"
+                android:textColorHint="#D1D5DB"
+
+
+
+                />
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="45dp">
+                <ImageView
+
+                    android:layout_width="15dp"
+                    android:layout_height="8dp"
+                    android:id="@+id/arrow_icon3"
+                    android:background="@drawable/dropdown"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <TextView
+
+            android:id="@+id/gendertxt"
+            android:layout_marginTop="10dp"
+            android:text="Enter gender"
+            android:layout_below="@+id/rl_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:id="@+id/rl_country"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/gendertxt"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_background"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:id="@+id/flagicon"
+                android:background="@drawable/flag"/>
+            <Spinner
+                android:paddingLeft="15dp"
+                android:layout_toRightOf="@+id/flagicon"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:id="@+id/edt_country"
+                android:textColorHint="#D1D5DB"
+
+
+
+                />
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_height="45dp">
+                <ImageView
+
+                    android:layout_width="15dp"
+                    android:layout_height="8dp"
+                    android:id="@+id/arrow_icon2"
+                    android:background="@drawable/dropdown"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+
+            android:id="@+id/errortxt5"
+            android:layout_marginTop="10dp"
+            android:text="Enter country"
+            android:layout_below="@+id/rl_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_below="@+id/errortxt5"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_signup"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/v1"
+            android:layout_width="match_parent"
+            android:background="@drawable/signup"
+            android:layout_height="45dp">
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

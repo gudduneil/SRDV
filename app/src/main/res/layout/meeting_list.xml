@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+
+    android:layout_height="match_parent">
+    ////////////////////////////////////////////
+
+    <LinearLayout
+        android:background="#15172C"
+        android:id="@+id/Resume_ll"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:weightSum="2"
+        android:paddingTop="0dp"
+        android:paddingBottom="10dp"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:background="@drawable/mold_style"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3.02"
+            android:layout_weight="2">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".5"
+                    android:text="20:00"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="#E1187A"/>
+                <TextView
+                    android:textSize="12sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".5"
+                    android:text="-22:00"
+                    android:gravity="center_horizontal"
+                    android:textColor="#767998"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".01"
+                android:background="#0F0F27"></LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".5"
+                    android:text="Friday"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="#FFF"/>
+                <TextView
+                    android:textSize="12sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".5"
+                    android:text="17.03.2017"
+                    android:gravity="center_horizontal"
+                    android:textColor="#767998"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".01"
+                android:background="#0F0F27"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="1">
+                <TextView
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".5"
+                    android:text="Romeo, Juliet"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="#FFF"/>
+                <TextView
+                    android:textSize="12sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".5"
+                    android:text="Garden"
+                    android:gravity="center_horizontal"
+                    android:textColor="#767998"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    ///////////////////////////////////////////////////
+
+</LinearLayout>

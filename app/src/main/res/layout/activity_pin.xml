@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/login_app"
+
+    android:layout_height="match_parent"
+>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:paddingTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+
+
+        <ImageView
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:id="@+id/logo"
+            android:background="@drawable/iconwithshadow"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+
+        <com.guidiyam.sexrdv.customview.Pacifico_RegularTextView
+            android:layout_gravity="center"
+            android:layout_below="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iconname"
+            android:text="Sex Rendez-Vous"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"
+            />
+        <TextView
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your PIN code"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_horizontal"
+            />
+        </LinearLayout>
+
+            <com.andrognito.pinlockview.IndicatorDots
+                android:layout_marginTop="10dp"
+                app:pinLength="4"
+                android:id="@+id/indicator_dots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:dotEmptyBackground="@drawable/round_white"
+                app:dotFilledBackground="@drawable/white_astrics"
+                   app:dotDiameter="60dp"
+                  app:dotSpacing="5dp"
+               android:layout_below="@+id/tv_header"/>
+
+            <com.andrognito.pinlockview.PinLockView
+                android:id="@+id/pin_lock_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                app:keypadButtonSize="50dp"
+                android:layout_gravity="center"
+
+
+                app:keypadShowDeleteButton="true"
+                app:keypadTextColor="@color/white"
+                app:keypadTextSize="30dp" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

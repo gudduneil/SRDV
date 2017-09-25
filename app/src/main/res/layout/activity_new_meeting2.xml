@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_new_meeting2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#16182D"
+    tools:context="com.guidiyam.sexrdv.NewActivityMeeting">
+
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#16182D">
+
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:weightSum="1.8"
+            android:orientation="vertical"
+            android:id="@+id/dt_layout"
+
+            >
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp">
+
+                <TextView
+                  android:gravity="center"
+
+
+                    android:textColorHint="#EFEFEF"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:id="@+id/txt_month"
+                    android:textColor="#EFEFEF"
+                    android:text="July"
+                    android:textSize="17sp"
+
+
+
+
+
+                    />
+
+                <ImageView
+
+
+
+
+                    android:layout_width="15dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/down_arrow2"/>
+
+            </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_weight=".8"
+
+            android:paddingLeft="40dp"
+            android:layout_height="0dp">
+            <TextView
+
+                android:id="@+id/txtyr"
+                android:gravity="left|top"
+                android:text="year"
+                android:textSize="10sp"
+                android:textColor="#5758D6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+           android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="-5dp"
+
+
+
+            android:orientation="vertical"
+
+            >
+            <ImageView
+
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/squareselect"/>
+
+            </LinearLayout>
+    </RelativeLayout>
+
+
+    <!--<ScrollView-->
+        <!--android:layout_above="@+id/banner"-->
+        <!--android:layout_below="@+id/topbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:fillViewport="true"-->
+        <!--android:layout_height="match_parent">-->
+    <LinearLayout
+        android:layout_above="@+id/banner"
+        android:layout_below="@+id/topbar"
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#16182D"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:paddingTop="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <RelativeLayout
+
+                android:id="@+id/newmeeting"
+                android:orientation="horizontal"
+                android:background="@drawable/bar"
+                android:layout_width="match_parent"
+                android:paddingLeft="30dp"
+                android:layout_height="60dp">
+
+                <ImageView
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/plus_icon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+
+
+                <TextView
+
+                    android:text="Plan new meeting"
+                    android:textColor="#767998"
+                    android:textSize="18sp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+            </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/recyclerviewlayout2"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerview2"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+
+            android:visibility="visible"
+          android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="15dp">
+
+<View
+    android:layout_centerInParent="true"
+    android:layout_width="match_parent"
+    android:background="#1B1F38"
+    android:layout_height="1dp"/>
+
+
+
+<ImageView
+    android:layout_centerInParent="true"
+    android:layout_width="5dp"
+    android:layout_height="5dp"
+    android:src="@drawable/red_dot"/>
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/recyclerviewlayout"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerview"
+                android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    <!--</ScrollView>-->
+
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/banner_image"
+        />
+
+</RelativeLayout>

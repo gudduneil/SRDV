@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_app"
+    tools:context="com.guidiyam.sexrdv.Login">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <RelativeLayout
+          android:paddingTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_gravity="center"
+
+
+            >
+
+            <ImageView
+
+                android:visibility="visible"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/logo"
+                android:background="@drawable/iconwithshadow"
+                android:layout_width="150dp"
+                android:layout_height="150dp" />
+
+            <com.guidiyam.sexrdv.customview.Pacifico_RegularTextView
+                android:layout_centerInParent="true"
+          android:layout_below="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iconname"
+                android:text="Sex Rendez-Vous"
+                android:textSize="30sp"
+                android:textColor="#FFFFFF"
+              />
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/rl_email"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_below="@+id/iconname"
+                android:layout_width="match_parent"
+                android:background="@drawable/edit_background"
+                android:layout_height="45dp">
+
+<ImageView
+    android:layout_marginLeft="10dp"
+    android:layout_centerVertical="true"
+    android:layout_width="18dp"
+    android:layout_height="13dp"
+    android:id="@+id/emilicon"
+    android:background="@drawable/email_icon"/>
+            <EditText
+                android:paddingLeft="14dp"
+                android:layout_toRightOf="@+id/emilicon"
+               android:layout_centerVertical="true"
+                android:textColorHint="#D1D5DB"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress|textNoSuggestions"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="16sp"
+                android:background="@null"
+                android:textColor="#EFEFEF"
+                android:id="@+id/email"
+
+
+               />
+
+            </RelativeLayout>
+
+            <TextView
+
+                android:id="@+id/errortxt"
+                android:layout_marginTop="10dp"
+                android:text="@string/Enter_email"
+                android:layout_below="@+id/rl_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/rl_pass"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/errortxt"
+                android:layout_width="match_parent"
+                android:background="@drawable/edit_background"
+                android:layout_height="45dp">
+
+                <ImageView
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="13dp"
+                    android:layout_height="16dp"
+                    android:id="@+id/pass"
+                    android:background="@drawable/password"/>
+                <EditText
+                    android:paddingLeft="15dp"
+                    android:layout_toRightOf="@+id/pass"
+                    android:layout_centerVertical="true"
+                    android:textColorHint="#D1D5DB"
+                    android:hint="@string/password"
+                    android:inputType="textPassword|textNoSuggestions"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="16sp"
+                    android:background="@null"
+                    android:id="@+id/password"
+                    android:textColor="#EFEFEF"
+                    android:text=""
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+
+                android:id="@+id/errortxt2"
+                android:layout_marginTop="10dp"
+                android:text="Enter your password"
+                android:layout_below="@+id/rl_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:id="@+id/rl_login"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/errortxt2"
+            android:layout_width="match_parent"
+            android:background="@drawable/login"
+            android:layout_height="45dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_txt"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+
+                android:layout_below="@+id/rl_login"
+                android:layout_width="match_parent"
+
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                android:text="@string/orsignin"
+/>
+
+
+                </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_social"
+                android:layout_below="@+id/rl_txt"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp">
+
+
+                <TextView
+                    android:id="@+id/fb"
+                    android:gravity="center"
+                    android:text="Facebook"
+                    android:textColor="#fff"
+                    android:layout_centerVertical="true"
+                    android:layout_width="100dp"
+                    android:background="@drawable/edit_background"
+                    android:layout_height="40dp"
+                   />
+                <View
+                    android:id="@+id/v1"
+                    android:layout_toRightOf="@+id/fb"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/google"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:text="Google"
+                    android:textColor="#fff"
+                    android:background="@drawable/edit_background"
+                    android:layout_toRightOf="@+id/v1"/>
+
+                <!--<TextView-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:id="@+id/google"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="Google"-->
+                    <!--android:textColor="#fff"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_width="100dp"-->
+                    <!--android:background="@drawable/edit_background"-->
+                    <!--android:layout_height="40dp" />-->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/rl_social">
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+        <RelativeLayout
+
+            android:id="@+id/rl_signup"
+            android:layout_below="@+id/rl1"
+            android:layout_width="match_parent"
+
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+
+            android:gravity="center"
+
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_centerVertical="true"
+
+                android:layout_alignParentBottom="true"
+                android:id="@+id/txtdont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFF"
+                android:text="@string/have_an_accn"/>
+            <View
+                android:id="@+id/v2"
+                android:layout_toRightOf="@id/txtdont"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:singleLine="true"
+
+
+                android:layout_centerVertical="true"
+                android:layout_alignParentBottom="true"
+                android:textStyle="bold"
+                android:id="@+id/txtsignup"
+                android:layout_toRightOf="@+id/v2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFF"
+                android:text="@string/Sign_Up"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/rl_signup"></RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+        </ScrollView>
+    <ProgressBar
+        android:id="@+id/pbar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+    android:layout_centerInParent="true" />
+</RelativeLayout>

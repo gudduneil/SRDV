@@ -1,0 +1,2030 @@
+[
+    {
+        "outputFile": "/home/su/SexRendez-Vous/library/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 39,
+                    "endOffset": 90
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 39,
+                        "endOffset": 90
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 95,
+                    "endColumn": 54,
+                    "endOffset": 145
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 95,
+                        "endColumn": 54,
+                        "endOffset": 145
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 150,
+                    "endColumn": 63,
+                    "endOffset": 209
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 150,
+                        "endColumn": 63,
+                        "endOffset": 209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 214,
+                    "endColumn": 57,
+                    "endOffset": 267
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 214,
+                        "endColumn": 57,
+                        "endOffset": 267
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 272,
+                    "endColumn": 49,
+                    "endOffset": 317
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 272,
+                        "endColumn": 49,
+                        "endOffset": 317
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 322,
+                    "endColumn": 57,
+                    "endOffset": 375
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 322,
+                        "endColumn": 57,
+                        "endOffset": 375
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 380,
+                    "endColumn": 39,
+                    "endOffset": 415
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 380,
+                        "endColumn": 39,
+                        "endOffset": 415
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 1117,
+                    "endColumn": 56,
+                    "endOffset": 1169
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 1117,
+                        "endColumn": 56,
+                        "endOffset": 1169
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1174,
+                    "endColumn": 53,
+                    "endOffset": 1223
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1174,
+                        "endColumn": 53,
+                        "endOffset": 1223
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1228,
+                    "endColumn": 48,
+                    "endOffset": 1272
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1228,
+                        "endColumn": 48,
+                        "endOffset": 1272
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1277,
+                    "endColumn": 55,
+                    "endOffset": 1328
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1277,
+                        "endColumn": 55,
+                        "endOffset": 1328
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1333,
+                    "endColumn": 53,
+                    "endOffset": 1382
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1333,
+                        "endColumn": 53,
+                        "endOffset": 1382
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1387,
+                    "endColumn": 48,
+                    "endOffset": 1431
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1387,
+                        "endColumn": 48,
+                        "endOffset": 1431
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1436,
+                    "endColumn": 59,
+                    "endOffset": 1491
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1436,
+                        "endColumn": 59,
+                        "endOffset": 1491
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1496,
+                    "endColumn": 47,
+                    "endOffset": 1539
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1496,
+                        "endColumn": 47,
+                        "endOffset": 1539
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1544,
+                    "endColumn": 37,
+                    "endOffset": 1577
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1544,
+                        "endColumn": 37,
+                        "endOffset": 1577
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1582,
+                    "endColumn": 46,
+                    "endOffset": 1624
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1582,
+                        "endColumn": 46,
+                        "endOffset": 1624
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1629,
+                    "endColumn": 46,
+                    "endOffset": 1671
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1629,
+                        "endColumn": 46,
+                        "endOffset": 1671
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1676,
+                    "endColumn": 52,
+                    "endOffset": 1724
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1676,
+                        "endColumn": 52,
+                        "endOffset": 1724
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1729,
+                    "endColumn": 49,
+                    "endOffset": 1774
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1729,
+                        "endColumn": 49,
+                        "endOffset": 1774
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1779,
+                    "endColumn": 61,
+                    "endOffset": 1836
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1779,
+                        "endColumn": 61,
+                        "endOffset": 1836
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1841,
+                    "endLine": 26,
+                    "endColumn": 12,
+                    "endOffset": 1996
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1841,
+                        "endLine": 26,
+                        "endColumn": 12,
+                        "endOffset": 1996
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2001,
+                    "endColumn": 32,
+                    "endOffset": 2029
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 2001,
+                        "endColumn": 32,
+                        "endOffset": 2029
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2034,
+                    "endLine": 31,
+                    "endColumn": 12,
+                    "endOffset": 2208
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 2034,
+                        "endLine": 31,
+                        "endColumn": 12,
+                        "endOffset": 2208
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2213,
+                    "endLine": 37,
+                    "endColumn": 12,
+                    "endOffset": 2492
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 2213,
+                        "endLine": 37,
+                        "endColumn": 12,
+                        "endOffset": 2492
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 2497,
+                    "endLine": 41,
+                    "endColumn": 12,
+                    "endOffset": 2649
+                },
+                "from": {
+                    "file": "/home/su/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 2497,
+                        "endLine": 41,
+                        "endColumn": 12,
+                        "endOffset": 2649
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 39,
+                    "endOffset": 90
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 39,
+                        "endOffset": 90
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 95,
+                    "endColumn": 54,
+                    "endOffset": 145
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 95,
+                        "endColumn": 54,
+                        "endOffset": 145
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 150,
+                    "endColumn": 63,
+                    "endOffset": 209
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 150,
+                        "endColumn": 63,
+                        "endOffset": 209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 214,
+                    "endColumn": 57,
+                    "endOffset": 267
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 214,
+                        "endColumn": 57,
+                        "endOffset": 267
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 272,
+                    "endColumn": 49,
+                    "endOffset": 317
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 272,
+                        "endColumn": 49,
+                        "endOffset": 317
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 322,
+                    "endColumn": 57,
+                    "endOffset": 375
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 322,
+                        "endColumn": 57,
+                        "endOffset": 375
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 380,
+                    "endColumn": 39,
+                    "endOffset": 415
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 380,
+                        "endColumn": 39,
+                        "endOffset": 415
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 1117,
+                    "endColumn": 56,
+                    "endOffset": 1169
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 1117,
+                        "endColumn": 56,
+                        "endOffset": 1169
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1174,
+                    "endColumn": 53,
+                    "endOffset": 1223
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1174,
+                        "endColumn": 53,
+                        "endOffset": 1223
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1228,
+                    "endColumn": 48,
+                    "endOffset": 1272
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1228,
+                        "endColumn": 48,
+                        "endOffset": 1272
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1277,
+                    "endColumn": 55,
+                    "endOffset": 1328
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1277,
+                        "endColumn": 55,
+                        "endOffset": 1328
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1333,
+                    "endColumn": 53,
+                    "endOffset": 1382
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1333,
+                        "endColumn": 53,
+                        "endOffset": 1382
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1387,
+                    "endColumn": 48,
+                    "endOffset": 1431
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1387,
+                        "endColumn": 48,
+                        "endOffset": 1431
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1436,
+                    "endColumn": 59,
+                    "endOffset": 1491
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1436,
+                        "endColumn": 59,
+                        "endOffset": 1491
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1496,
+                    "endColumn": 47,
+                    "endOffset": 1539
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1496,
+                        "endColumn": 47,
+                        "endOffset": 1539
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1544,
+                    "endColumn": 37,
+                    "endOffset": 1577
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1544,
+                        "endColumn": 37,
+                        "endOffset": 1577
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1582,
+                    "endColumn": 46,
+                    "endOffset": 1624
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1582,
+                        "endColumn": 46,
+                        "endOffset": 1624
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1629,
+                    "endColumn": 46,
+                    "endOffset": 1671
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1629,
+                        "endColumn": 46,
+                        "endOffset": 1671
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1676,
+                    "endColumn": 52,
+                    "endOffset": 1724
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1676,
+                        "endColumn": 52,
+                        "endOffset": 1724
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1729,
+                    "endColumn": 49,
+                    "endOffset": 1774
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1729,
+                        "endColumn": 49,
+                        "endOffset": 1774
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1779,
+                    "endColumn": 61,
+                    "endOffset": 1836
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1779,
+                        "endColumn": 61,
+                        "endOffset": 1836
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1841,
+                    "endLine": 26,
+                    "endColumn": 12,
+                    "endOffset": 1996
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1841,
+                        "endLine": 26,
+                        "endColumn": 12,
+                        "endOffset": 1996
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2001,
+                    "endColumn": 32,
+                    "endOffset": 2029
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 2001,
+                        "endColumn": 32,
+                        "endOffset": 2029
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2034,
+                    "endLine": 31,
+                    "endColumn": 12,
+                    "endOffset": 2208
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 2034,
+                        "endLine": 31,
+                        "endColumn": 12,
+                        "endOffset": 2208
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2213,
+                    "endLine": 37,
+                    "endColumn": 12,
+                    "endOffset": 2492
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 2213,
+                        "endLine": 37,
+                        "endColumn": 12,
+                        "endOffset": 2492
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 2497,
+                    "endLine": 41,
+                    "endColumn": 12,
+                    "endOffset": 2649
+                },
+                "from": {
+                    "file": "/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 2497,
+                        "endLine": 41,
+                        "endColumn": 12,
+                        "endOffset": 2649
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 39,
+                    "endOffset": 90
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 39,
+                        "endOffset": 90
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 95,
+                    "endColumn": 54,
+                    "endOffset": 145
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 95,
+                        "endColumn": 54,
+                        "endOffset": 145
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 150,
+                    "endColumn": 63,
+                    "endOffset": 209
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 150,
+                        "endColumn": 63,
+                        "endOffset": 209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 214,
+                    "endColumn": 57,
+                    "endOffset": 267
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 214,
+                        "endColumn": 57,
+                        "endOffset": 267
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 272,
+                    "endColumn": 49,
+                    "endOffset": 317
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 272,
+                        "endColumn": 49,
+                        "endOffset": 317
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 322,
+                    "endColumn": 57,
+                    "endOffset": 375
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 322,
+                        "endColumn": 57,
+                        "endOffset": 375
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 380,
+                    "endColumn": 39,
+                    "endOffset": 415
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 380,
+                        "endColumn": 39,
+                        "endOffset": 415
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 1117,
+                    "endColumn": 56,
+                    "endOffset": 1169
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 1117,
+                        "endColumn": 56,
+                        "endOffset": 1169
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1174,
+                    "endColumn": 53,
+                    "endOffset": 1223
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1174,
+                        "endColumn": 53,
+                        "endOffset": 1223
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1228,
+                    "endColumn": 48,
+                    "endOffset": 1272
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1228,
+                        "endColumn": 48,
+                        "endOffset": 1272
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1277,
+                    "endColumn": 55,
+                    "endOffset": 1328
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1277,
+                        "endColumn": 55,
+                        "endOffset": 1328
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1333,
+                    "endColumn": 53,
+                    "endOffset": 1382
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1333,
+                        "endColumn": 53,
+                        "endOffset": 1382
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1387,
+                    "endColumn": 48,
+                    "endOffset": 1431
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1387,
+                        "endColumn": 48,
+                        "endOffset": 1431
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1436,
+                    "endColumn": 59,
+                    "endOffset": 1491
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1436,
+                        "endColumn": 59,
+                        "endOffset": 1491
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1496,
+                    "endColumn": 47,
+                    "endOffset": 1539
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1496,
+                        "endColumn": 47,
+                        "endOffset": 1539
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1544,
+                    "endColumn": 37,
+                    "endOffset": 1577
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1544,
+                        "endColumn": 37,
+                        "endOffset": 1577
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1582,
+                    "endColumn": 46,
+                    "endOffset": 1624
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1582,
+                        "endColumn": 46,
+                        "endOffset": 1624
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1629,
+                    "endColumn": 46,
+                    "endOffset": 1671
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1629,
+                        "endColumn": 46,
+                        "endOffset": 1671
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1676,
+                    "endColumn": 52,
+                    "endOffset": 1724
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1676,
+                        "endColumn": 52,
+                        "endOffset": 1724
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1729,
+                    "endColumn": 49,
+                    "endOffset": 1774
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1729,
+                        "endColumn": 49,
+                        "endOffset": 1774
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1779,
+                    "endColumn": 61,
+                    "endOffset": 1836
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1779,
+                        "endColumn": 61,
+                        "endOffset": 1836
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1841,
+                    "endLine": 26,
+                    "endColumn": 12,
+                    "endOffset": 1996
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1841,
+                        "endLine": 26,
+                        "endColumn": 12,
+                        "endOffset": 1996
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2001,
+                    "endColumn": 32,
+                    "endOffset": 2029
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 2001,
+                        "endColumn": 32,
+                        "endOffset": 2029
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2034,
+                    "endLine": 31,
+                    "endColumn": 12,
+                    "endOffset": 2208
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 2034,
+                        "endLine": 31,
+                        "endColumn": 12,
+                        "endOffset": 2208
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2213,
+                    "endLine": 37,
+                    "endColumn": 12,
+                    "endOffset": 2492
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 2213,
+                        "endLine": 37,
+                        "endColumn": 12,
+                        "endOffset": 2492
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 2497,
+                    "endLine": 41,
+                    "endColumn": 12,
+                    "endOffset": 2649
+                },
+                "from": {
+                    "file": "/home/su/SRDV_NEW/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 2497,
+                        "endLine": 41,
+                        "endColumn": 12,
+                        "endOffset": 2649
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 39,
+                    "endOffset": 90
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 39,
+                        "endOffset": 90
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 95,
+                    "endColumn": 54,
+                    "endOffset": 145
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 95,
+                        "endColumn": 54,
+                        "endOffset": 145
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 150,
+                    "endColumn": 63,
+                    "endOffset": 209
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 150,
+                        "endColumn": 63,
+                        "endOffset": 209
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 214,
+                    "endColumn": 57,
+                    "endOffset": 267
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 214,
+                        "endColumn": 57,
+                        "endOffset": 267
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 272,
+                    "endColumn": 49,
+                    "endOffset": 317
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 272,
+                        "endColumn": 49,
+                        "endOffset": 317
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 322,
+                    "endColumn": 57,
+                    "endOffset": 375
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 322,
+                        "endColumn": 57,
+                        "endOffset": 375
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 380,
+                    "endColumn": 39,
+                    "endOffset": 415
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 380,
+                        "endColumn": 39,
+                        "endOffset": 415
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 1117,
+                    "endColumn": 56,
+                    "endOffset": 1169
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 1117,
+                        "endColumn": 56,
+                        "endOffset": 1169
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1174,
+                    "endColumn": 53,
+                    "endOffset": 1223
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1174,
+                        "endColumn": 53,
+                        "endOffset": 1223
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1228,
+                    "endColumn": 48,
+                    "endOffset": 1272
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1228,
+                        "endColumn": 48,
+                        "endOffset": 1272
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1277,
+                    "endColumn": 55,
+                    "endOffset": 1328
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1277,
+                        "endColumn": 55,
+                        "endOffset": 1328
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1333,
+                    "endColumn": 53,
+                    "endOffset": 1382
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1333,
+                        "endColumn": 53,
+                        "endOffset": 1382
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1387,
+                    "endColumn": 48,
+                    "endOffset": 1431
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1387,
+                        "endColumn": 48,
+                        "endOffset": 1431
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1436,
+                    "endColumn": 59,
+                    "endOffset": 1491
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1436,
+                        "endColumn": 59,
+                        "endOffset": 1491
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1496,
+                    "endColumn": 47,
+                    "endOffset": 1539
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1496,
+                        "endColumn": 47,
+                        "endOffset": 1539
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1544,
+                    "endColumn": 37,
+                    "endOffset": 1577
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1544,
+                        "endColumn": 37,
+                        "endOffset": 1577
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1582,
+                    "endColumn": 46,
+                    "endOffset": 1624
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1582,
+                        "endColumn": 46,
+                        "endOffset": 1624
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1629,
+                    "endColumn": 46,
+                    "endOffset": 1671
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1629,
+                        "endColumn": 46,
+                        "endOffset": 1671
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1676,
+                    "endColumn": 52,
+                    "endOffset": 1724
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1676,
+                        "endColumn": 52,
+                        "endOffset": 1724
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1729,
+                    "endColumn": 49,
+                    "endOffset": 1774
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1729,
+                        "endColumn": 49,
+                        "endOffset": 1774
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1779,
+                    "endColumn": 61,
+                    "endOffset": 1836
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1779,
+                        "endColumn": 61,
+                        "endOffset": 1836
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1841,
+                    "endLine": 26,
+                    "endColumn": 12,
+                    "endOffset": 1996
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 1841,
+                        "endLine": 26,
+                        "endColumn": 12,
+                        "endOffset": 1996
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2001,
+                    "endColumn": 32,
+                    "endOffset": 2029
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 2001,
+                        "endColumn": 32,
+                        "endOffset": 2029
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2034,
+                    "endLine": 31,
+                    "endColumn": 12,
+                    "endOffset": 2208
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 2034,
+                        "endLine": 31,
+                        "endColumn": 12,
+                        "endOffset": 2208
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 2213,
+                    "endLine": 37,
+                    "endColumn": 12,
+                    "endOffset": 2492
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 2213,
+                        "endLine": 37,
+                        "endColumn": 12,
+                        "endOffset": 2492
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 2497,
+                    "endLine": 41,
+                    "endColumn": 12,
+                    "endOffset": 2649
+                },
+                "from": {
+                    "file": "/home/su/all projects backup/SexRendez-Vous/library/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 2497,
+                        "endLine": 41,
+                        "endColumn": 12,
+                        "endOffset": 2649
+                    }
+                }
+            }
+        ]
+    }
+]
