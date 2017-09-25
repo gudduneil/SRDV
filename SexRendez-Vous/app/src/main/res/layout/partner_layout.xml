@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.guidiyam.sexrdv.helper.SwipeLayout
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+   >
+
+
+        <LinearLayout
+            android:id="@+id/ll_deletegroupo"
+            android:layout_width="60dp"
+            android:paddingRight="25dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/del"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Delete"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+
+                />
+
+
+        </LinearLayout>
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+
+
+        >
+        <LinearLayout
+
+            android:background="@drawable/mold_dark_fade_blue_rectangle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+
+                />
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/name"
+            android:text="Person Name"
+            android:textSize="15sp"
+            android:paddingLeft="15dp"
+            android:textColor="#FFFFFF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_weight="4"
+
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:weightSum="2"
+            android:gravity="center"
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/chat"
+                    android:layout_centerInParent="true"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/chatselect"
+                    />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:background="#15172C"
+                android:id="@+id/txt1"
+                android:layout_width="1dp"
+                android:layout_height="50dp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+
+                    android:id="@+id/msg"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/msgselect"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+            </LinearLayout>
+    </LinearLayout>
+</com.guidiyam.sexrdv.helper.SwipeLayout>
+</LinearLayout>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="#16182D"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/singlemeeting_layout"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:background="@drawable/rectangle"
+            android:orientation="vertical"
+            android:weightSum="2"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:paddingLeft="20dp"
+
+                    >
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/from_time"
+                        android:layout_weight=".5"
+                        android:text="19:00"
+                        android:textSize="16sp"
+                        android:textColor="#767998"/>
+
+
+
+                    <TextView
+                        android:layout_marginLeft="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/to_time"
+                        android:text="- 22:00"
+                        android:textSize="12sp"
+                        android:layout_weight=".5"
+                        android:textColor="#767998"/>
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#16182D"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:paddingLeft="10dp"
+
+                    >
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/day"
+                        android:layout_weight=".5"
+                        android:text="Friday"
+                        android:gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:textColor="#767998"/>
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/date"
+                        android:text="07.04.2017"
+                        android:textSize="12sp"
+                        android:layout_weight=".5"
+                        android:textColor="#767998"/>
+
+
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#16182D"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+                    android:paddingLeft="10dp"
+
+
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/name"
+                        android:layout_weight=".5"
+                        android:text="Marika,Briyan"
+
+                        android:textSize="12sp"
+                        android:gravity="center_vertical"
+                        android:textColor="#767998"/>
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/adresss"
+                        android:text="Chamber"
+                        android:textSize="12sp"
+                        android:gravity="left"
+                        android:layout_weight=".5"
+                        android:textColor="#767998"/>
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#16182D"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+
+                android:orientation="horizontal"
+
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="7dp"
+                    />
+
+
+
+
+                ///////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/tick"
+            android:visibility="invisible"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/tick_rounded"/>
+
+        <ImageView
+            android:id="@+id/dot"
+            android:visibility="invisible"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tick"
+            android:layout_alignParentRight="true"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:src="@drawable/red_dot"/>
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

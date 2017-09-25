@@ -1,0 +1,35 @@
+<resources>
+
+    <string name="app_name">Sex Rendez-Vous</string>
+    <string name="facebook_app_id">1021524724657487</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="name">Votre nom</string>
+    <string name="email">Votre e-mail</string>
+    <string name="password">Votre mot de passe</string>
+    <string name="con_pass">Confirmer votre mot de passe</string>
+    <string name="orsignin">Ou connectez-vous avec</string>
+    <string name="Enter_name">Entrez votre nom</string>
+    <string name="Enter_email">Entrez votre e-mail</string>
+    <string name="Enter_password">Tapez votre mot de passe</string>
+    <string name="have_an_accn">Vous n\'avez pas encore de compte?</string>
+    <string name="Sign_Up">S\'inscrire</string>
+    <string name="invalidemail">Email invalide!!!</string>
+    <string name="New_Account">Nouveau comptet</string>
+    <string name="Your_gender">Votre sexe</string>
+    <string name="Male">Mâle</string>
+    <string name="Female">Femelle</string>
+    <string name="Country">Pays</string>
+
+    <string name="paschk">Le mot de passe doit comporter 6 caractères</string>
+
+    <string name="pasdiff">Les mots de passe sont différents! Réessayer</string>
+    <string name="entercountry">Entrez le pays</string>
+    <string name="entergender">Entrer le genre</string>
+    <string name="internet_conn">Vérifiez votre connexion Internet</string>
+    <string name="backagain">Appuyez à nouveau sur Quitter.</string>
+    <string name="perfect">Parfait!</string>
+    <string name="succesfull_registration">Votre inscription a été couronnée de succès!</string>
+    <string name="succesfull_msg">Profitez de votre compte gratuit\net commencez à vous amuser maintenant!</string>
+    <string name="ph_number">Votre numéro de téléphone</string>
+    <string name="enter_ph_number">Entrez votre numéro de téléphone</string>
+</resources>

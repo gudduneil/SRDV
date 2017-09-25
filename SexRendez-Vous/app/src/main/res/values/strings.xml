@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Sex Rendez-Vous</string>
+    <string name="facebook_app_id">1021524724657487</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="name">Your name</string>
+    <string name="email">Your e-mail</string>
+    <string name="password">Your password</string>
+    <string name="con_pass">Confirm your password</string>
+    <string name="orsignin">or sign in with</string>
+    <string name="Enter_name">Enter your name</string>
+    <string name="Enter_email">Enter your e-email</string>
+    <string name="Enter_password">Enter your password</string>
+    <string name="have_an_accn">Don\'t have an account yet?</string>
+    <string name="Sign_Up">Sign Up</string>
+    <string name="invalidemail">Invalid email!!!</string>
+    <string name="New_Account">New account</string>
+    <string name="Your_gender">Your gender</string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
+    <string name="Country">Country</string>
+
+    <string name="paschk">Password must be 6 characters</string>
+
+    <string name="pasdiff">Passwords are different! Try again</string>
+    <string name="entercountry">Enter country</string>
+    <string name="entergender">Enter gender</string>
+    <string name="internet_conn">Please check your internet connection</string>
+    <string name="backagain">Press Back again to Exit.</string>
+    <string name="perfect">Perfect!</string>
+    <string name="succesfull_registration">Your registration has been successful!</string>
+    <string name="succesfull_msg">Enjoy your free account\nand start having fun now!</string>
+    <string name="ph_number">Your phone number</string>
+    <string name="enter_ph_number">Enter your phone number</string>
+</resources>

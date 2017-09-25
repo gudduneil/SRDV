@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:tag="weekRow6"
+    android:weightSum="7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer36">
+
+        <com.stacktips.view.DayView
+            style="@style/CalendarView.DayOfTheMonth"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:tag="dayOfMonthText36"
+            android:id="@+id/txt36"
+            android:text="36" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer37">
+
+        <com.stacktips.view.DayView
+            android:id="@+id/txt37"
+            style="@style/CalendarView.DayOfTheMonth"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:tag="dayOfMonthText37"
+            android:textColor="#FFFFFF"
+            android:text="37" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer38">
+
+        <com.stacktips.view.DayView
+            android:id="@+id/txt38"
+            style="@style/CalendarView.DayOfTheMonth"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:tag="dayOfMonthText38"
+            android:text="38" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer39">
+
+        <com.stacktips.view.DayView
+            android:id="@+id/txt39"
+            style="@style/CalendarView.DayOfTheMonth"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:tag="dayOfMonthText39"
+            android:textColor="#FFFFFF"
+            android:text="39" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer40">
+
+        <com.stacktips.view.DayView
+            android:id="@+id/txt40"
+            style="@style/CalendarView.DayOfTheMonth"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:textColor="#FFFFFF"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:tag="dayOfMonthText40"
+            android:text="40" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer41">
+
+        <com.stacktips.view.DayView
+            android:id="@+id/txt41"
+            style="@style/CalendarView.DayOfTheMonth"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:tag="dayOfMonthText41"
+            android:text="41" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:tag="dayOfMonthContainer42">
+
+        <com.stacktips.view.DayView
+            android:id="@+id/txt42"
+            style="@style/CalendarView.DayOfTheMonth"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:tag="dayOfMonthText42"
+            android:text="42" />
+    </RelativeLayout>
+</LinearLayout>

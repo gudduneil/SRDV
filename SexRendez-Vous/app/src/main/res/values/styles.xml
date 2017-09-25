@@ -1,0 +1,78 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+    <style name="dialog" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">#16182D</item>
+
+    </style>
+    <style name="MaterialDialogSheet" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="backgroundTint">?attr/colorAccent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@style/MaterialDialogSheetAnimation</item>
+    </style>
+    <style name="MaterialDialogSheetAnimation">
+        <item name="android:windowEnterAnimation">@anim/popshow</item>
+        <item name="android:windowExitAnimation">@anim/pophide</item>
+    </style>
+
+    <style name="Calendar" />
+    <style name="Calendar.DayOfTheWeek">
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--<style name="dialog" parent="AlertDialog.AppCompat">-->
+
+
+        <!--<item name="colorAccent">#16182D</item>-->
+    <!--</style>-->
+    <!--<style name="dialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">-->
+    <!--<item name="colorAccent">#16182D</item>-->
+
+    <!--</style>-->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="BrandedSwitch.control" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#5758D6</item>
+        <item name="colorSwitchThumbNormal">#000000</item>
+        <item name="colorControlNormal">#000000</item>
+        <!--<item name="colorAccent">#39ac39</item>-->
+        <!--<item name="android:colorForeground">#000000</item>-->
+
+    </style>
+  <!--<style name="SwitchStyle">-->
+      <!--<item name="android:colorControlActivated">#5758D6</item>-->
+      <!--<item name="android:colorControlHighlight">#000000</item>-->
+
+  <!--</style>-->
+
+    <!--<style name="Custom.Widget.SwitchCompat" parent="Widget.AppCompat.CompoundButton.Switch" >-->
+        <!--&lt;!&ndash;<item name="android:colorControlActivated">#5758D6</item>&ndash;&gt;-->
+    <!--</style>-->
+
+
+    <!--<style name="CalendarView.higlighted">-->
+        <!--<item name="android:layout_width">wrap_content</item>-->
+        <!--<item name="android:layout_height">1dp</item>-->
+        <!--<item name="android:gravity">center</item>-->
+    <!--</style>-->
+</resources>

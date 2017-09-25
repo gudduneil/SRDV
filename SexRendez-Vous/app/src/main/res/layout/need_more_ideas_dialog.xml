@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+
+
+   >
+
+<RelativeLayout
+android:layout_centerInParent="true"
+    android:background="@drawable/dialog_drawable"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_gravity="center"
+
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+
+            android:gravity="center"
+
+            android:id="@+id/menu"
+            >
+
+            <ImageView
+
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="0dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/coloringcross"
+                android:clickable="false" />
+
+
+        </LinearLayout>
+
+
+        <com.guidiyam.sexrdv.customview.Nunito_RegularTextView
+            android:id="@+id/top_bar_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Need more ideas?"
+
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+
+            />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:paddingTop="10dp"
+        android:layout_below="@+id/header"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <RelativeLayout
+            android:id="@+id/setPin"
+            android:layout_width="match_parent"
+            android:background="@drawable/take_me"
+            android:layout_height="55dp">
+            <TextView
+                android:visibility="gone"
+                android:textColor="#FFF"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Take me to the shop!"/>
+        </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>
+
+
+</RelativeLayout>

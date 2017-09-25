@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "697548689500",
+    "firebase_url": "https://srdv-f397a.firebaseio.com",
+    "project_id": "srdv-f397a",
+    "storage_bucket": "srdv-f397a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697548689500:android:99c045ced151338b",
+        "android_client_info": {
+          "package_name": "com.guidiyam.sexrdv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "697548689500-kpbvd9dh5sta2mmdk9b5u1r8ab8mk2f9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.guidiyam.sexrdv",
+            "certificate_hash": "332395a9a4c53652ac81737abbe9a1d4a6b2ab22"
+          }
+        },
+        {
+          "client_id": "697548689500-ijuilv4kuesh79u11cpe6v71jm3ke6op.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV2vTCGUlUZ7Ir5yr0Z_ls1KsprZ8BJtE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "697548689500-ijuilv4kuesh79u11cpe6v71jm3ke6op.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

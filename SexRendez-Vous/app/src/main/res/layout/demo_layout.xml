@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="#16182D"
+
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/singlemeeting_layout"
+            android:layout_width="match_parent"
+            android:layout_height="108dp"
+            android:background="@drawable/rectangle"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/first_layout"
+            >
+
+
+                <RelativeLayout
+
+                    android:layout_width="80dp"
+                    android:layout_height="57dp"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/first_block"
+                    android:gravity="center_vertical"
+
+                    >
+                    <TextView
+
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/from_time"
+                        android:layout_centerVertical="true"
+
+                        android:text="19:00"
+                        android:textSize="16sp"
+                        android:textColor="#767998"/>
+
+
+
+                    <TextView
+
+                        android:layout_below="@id/from_time"
+                        android:layout_marginLeft="3dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/to_time"
+                        android:text="- 22:00"
+                        android:textSize="12sp"
+                        android:textColor="#767998"/>
+
+
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/line1"
+                    android:layout_toRightOf="@+id/first_block"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#16182D"/>
+                <RelativeLayout
+                    android:layout_toRightOf="@+id/line1"
+                    android:layout_width="80dp"
+                    android:layout_height="57dp"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:id="@+id/second_block"
+
+                    >
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/day"
+                        android:text="Friday"
+                        android:gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:textColor="#767998"/>
+
+
+
+                    <TextView
+                        android:layout_below="@+id/day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/date"
+                        android:text="07.04.2017"
+                        android:textSize="12sp"
+                        android:textColor="#767998"/>
+
+
+
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/line2"
+                    android:layout_toRightOf="@+id/second_block"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#16182D"/>
+                <RelativeLayout
+                    android:layout_toRightOf="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="57dp"
+                    android:paddingLeft="10dp"
+android:gravity="center_vertical"
+
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/name"
+                        android:text="Marika,Briyan"
+
+                        android:textSize="12sp"
+                        android:textColor="#767998"/>
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/adresss"
+                        android:text="Chamber"
+                        android:layout_below="@+id/name"
+                        android:textSize="12sp"
+                        android:textColor="#767998"/>
+
+
+
+
+
+
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/first_layout"
+                android:id="@+id/line3"
+
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#16182D"/>
+            <RelativeLayout
+                android:layout_below="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:id="@+id/second_layout"
+                android:gravity="center_vertical"
+
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    />
+
+
+
+
+                ///////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+        <!--<RelativeLayout-->
+            <!--android:layout_toRightOf="@+id/singlemeeting_layout"-->
+         <!---->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent">-->
+
+
+        <!--</RelativeLayout>-->
+
+
+        <ImageView
+            android:layout_marginRight="10dp"
+
+
+            android:id="@+id/tick"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/tick_rounded"/>
+
+        <ImageView
+            android:id="@+id/dot"
+            android:visibility="invisible"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/tick"
+            android:layout_alignParentRight="true"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:src="@drawable/red_dot"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

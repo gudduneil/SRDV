@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15172C"
+>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+       >
+
+        <ImageView
+            android:id="@+id/bck"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/arrow"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick contacts to add"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:background="@android:color/transparent"
+            android:layout_centerInParent="true"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/mold_dark_fade_blue_rectangle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/button_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="12dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/search"
+            android:layout_centerVertical="true"
+            />
+
+        <EditText
+            android:layout_toRightOf="@+id/button_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter contact name"
+            android:textColorHint="#fff"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"
+            android:layout_centerInParent="true"
+            android:id="@+id/inputSearch"
+
+            />
+
+
+    </RelativeLayout>
+
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/rv_contact"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+</android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/pbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+
+
+        >
+        <ProgressBar
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
