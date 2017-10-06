@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15172C"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow"
+            />
+
+        <TextView
+            android:id="@+id/header_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What?"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_below="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:paddingLeft="40dp"
+        android:text="Extra comment"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_gray"
+
+        />
+
+    <RelativeLayout
+        android:layout_below="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        >
+        <RelativeLayout
+            android:id="@+id/rl_txt"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/mold_blue_rectangle2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@null"
+                android:id="@+id/edt_dialog_extra_comment"
+
+                android:gravity="left"
+                android:textColor="#fff"
+                android:textSize="13sp"
+                android:hint="Enter Extra Comment"
+                android:textColorHint="#fff"
+
+                />
+        </RelativeLayout>
+        <RelativeLayout
+           android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/rl_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_option"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+
+           />
+        </RelativeLayout>
+
+
+        <ProgressBar
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/pbar"
+            android:layout_centerInParent="true"
+           />
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

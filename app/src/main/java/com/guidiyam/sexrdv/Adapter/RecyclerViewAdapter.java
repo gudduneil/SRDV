@@ -2,6 +2,7 @@ package com.guidiyam.sexrdv.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +37,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
      Context mContext;
-    PartnerFrag activityPartner;
+    PartnerFrag fragpartner;
     //private ArrayList<String> mDataset;
     ArrayList<PartnerSetGet> mDataset;
 
@@ -46,8 +47,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         this.mDataset = objects;
 
 
-       // AppData.selectedcontact2.addAll(mDataset);
-        this.activityPartner=partnerFrag;
+//        AppData.selectedcontact2.addAll(mDataset);
+        this.fragpartner=partnerFrag;
     }
 
     @Override
@@ -60,6 +61,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(final SimpleViewHolder viewHolder, final int position) {
+
+        Log.d("Size", String.valueOf(mDataset.size()));
         viewHolder.SwipView.close();
 
         if (mDataset.get(position).isSelect()==false)
@@ -107,19 +110,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     //holder.tick.setVisibility(View.INVISIBLE);
                     viewHolder.background.setBackgroundResource(R.drawable.mold_dark_fade_blue_rectangle);
                     mDataset.get(position).setSelect(false);
+//                    AppData.selectedcontact2.get(position).setSelect(false);
                     AppData.selectedcontact.get(position).setSelect(false);
-                    //AppData.selectedcontact2.get(position).setSelect(false);
 
-                    activityPartner.partner_count--;
+                    fragpartner.frag_count--;
 
                 }else{
 
                     //holder.tick.setVisibility(View.VISIBLE);
                     viewHolder.background.setBackgroundResource(R.drawable.mold_blue_rectangle);
                     mDataset.get(position).setSelect(true);
-                    AppData.selectedcontact.get(position).setSelect(true);
-                  //  AppData.selectedcontact2.get(position).setSelect(true);
-                    activityPartner.partner_count++;
+//                   AppData.selectedcontact2.get(position).setSelect(true);
+                   AppData.selectedcontact.get(position).setSelect(true);
+                    fragpartner.frag_count++;
 
                 }
             }

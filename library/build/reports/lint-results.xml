@@ -14,7 +14,7 @@
         errorLine1="        dateText = dateText.substring(0, 1).toUpperCase() + dateText.subSequence(1, dateText.length());"
         errorLine2="                                            ~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/src/com/stacktips/view/CustomCalendarView.java"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/src/com/stacktips/view/CustomCalendarView.java"
             line="248"
             column="45"/>
     </issue>
@@ -32,7 +32,7 @@
         errorLine1="        final SimpleDateFormat df = new SimpleDateFormat(&quot;d&quot;);"
         errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/src/com/stacktips/view/DayView.java"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/src/com/stacktips/view/DayView.java"
             line="51"
             column="37"/>
     </issue>
@@ -49,7 +49,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/custom_calendar_title_layout.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/custom_calendar_title_layout.xml"
             line="29"
             column="9"/>
     </issue>
@@ -66,7 +66,7 @@
         errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/build.gradle"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/build.gradle"
             line="5"
             column="5"/>
     </issue>
@@ -83,7 +83,7 @@
         errorLine2="^"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable/button_next_month_selector.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable/button_next_month_selector.xml"
             line="2"
             column="1"/>
     </issue>
@@ -100,7 +100,7 @@
         errorLine2="^"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable/button_previous_month_selector.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable/button_previous_month_selector.xml"
             line="2"
             column="1"/>
     </issue>
@@ -117,7 +117,7 @@
         errorLine2="^"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/custom_calendar_layout_new.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/custom_calendar_layout_new.xml"
             line="2"
             column="1"/>
     </issue>
@@ -134,7 +134,7 @@
         errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/values/dimens.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/values/dimens.xml"
             line="5"
             column="12"/>
     </issue>
@@ -151,7 +151,7 @@
         errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/values/dimens.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/values/dimens.xml"
             line="8"
             column="12"/>
     </issue>
@@ -168,7 +168,7 @@
         errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/values/dimens.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/values/dimens.xml"
             line="12"
             column="12"/>
     </issue>
@@ -185,7 +185,7 @@
         errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/values/dimens.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/values/dimens.xml"
             line="13"
             column="12"/>
     </issue>
@@ -202,7 +202,7 @@
         errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/values/dimens.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/values/dimens.xml"
             line="14"
             column="12"/>
     </issue>
@@ -219,7 +219,7 @@
         errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/values/dimens.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/values/dimens.xml"
             line="15"
             column="12"/>
     </issue>
@@ -236,7 +236,7 @@
         errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/values/dimens.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/values/dimens.xml"
             line="16"
             column="12"/>
     </issue>
@@ -251,13 +251,13 @@
         explanation="Unused resources make applications larger and slow down builds."
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-hdpi/ic_arrow_up_blue.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-hdpi/ic_arrow_up_blue.png"/>
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-mdpi/ic_arrow_up_blue.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-mdpi/ic_arrow_up_blue.png"/>
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-xhdpi/ic_arrow_up_blue.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-xhdpi/ic_arrow_up_blue.png"/>
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-xxhdpi/ic_arrow_up_blue.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-xxhdpi/ic_arrow_up_blue.png"/>
     </issue>
 
     <issue
@@ -270,13 +270,13 @@
         explanation="Unused resources make applications larger and slow down builds."
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-hdpi/ic_arrow_up_blue_soft.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-hdpi/ic_arrow_up_blue_soft.png"/>
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-mdpi/ic_arrow_up_blue_soft.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-mdpi/ic_arrow_up_blue_soft.png"/>
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-xhdpi/ic_arrow_up_blue_soft.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-xhdpi/ic_arrow_up_blue_soft.png"/>
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-xxhdpi/ic_arrow_up_blue_soft.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-xxhdpi/ic_arrow_up_blue_soft.png"/>
     </issue>
 
     <issue
@@ -289,13 +289,13 @@
         explanation="Unused resources make applications larger and slow down builds."
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-hdpi/ic_arrow_up_gray.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-hdpi/ic_arrow_up_gray.png"/>
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-mdpi/ic_arrow_up_gray.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-mdpi/ic_arrow_up_gray.png"/>
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-xhdpi/ic_arrow_up_gray.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-xhdpi/ic_arrow_up_gray.png"/>
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-xxhdpi/ic_arrow_up_gray.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-xxhdpi/ic_arrow_up_gray.png"/>
     </issue>
 
     <issue
@@ -308,13 +308,13 @@
         explanation="Unused resources make applications larger and slow down builds."
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-hdpi/ic_arrow_up_gray_soft.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-hdpi/ic_arrow_up_gray_soft.png"/>
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-mdpi/ic_arrow_up_gray_soft.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-mdpi/ic_arrow_up_gray_soft.png"/>
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-xhdpi/ic_arrow_up_gray_soft.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-xhdpi/ic_arrow_up_gray_soft.png"/>
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-xxhdpi/ic_arrow_up_gray_soft.png"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-xxhdpi/ic_arrow_up_gray_soft.png"/>
     </issue>
 
     <issue
@@ -328,7 +328,7 @@
         url="http://developer.android.com/guide/practices/screens_support.html"
         urls="http://developer.android.com/guide/practices/screens_support.html">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-hdpi"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-hdpi"/>
     </issue>
 
     <issue
@@ -342,7 +342,7 @@
         url="http://developer.android.com/guide/practices/screens_support.html"
         urls="http://developer.android.com/guide/practices/screens_support.html">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-mdpi"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-mdpi"/>
     </issue>
 
     <issue
@@ -356,7 +356,7 @@
         url="http://developer.android.com/guide/practices/screens_support.html"
         urls="http://developer.android.com/guide/practices/screens_support.html">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/drawable-xhdpi"/>
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/drawable-xhdpi"/>
     </issue>
 
     <issue
@@ -371,7 +371,7 @@
         errorLine2="    ^"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/custom_calendar_title_layout.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/custom_calendar_title_layout.xml"
             line="10"
             column="5"/>
     </issue>
@@ -388,7 +388,7 @@
         errorLine2="    ^"
         quickfix="studio">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/custom_calendar_title_layout.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/custom_calendar_title_layout.xml"
             line="31"
             column="5"/>
     </issue>
@@ -406,7 +406,7 @@
         errorLine1="        dateTitle.setText(dateText + &quot; &quot; + currentCalendar.get(Calendar.YEAR));"
         errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/src/com/stacktips/view/CustomCalendarView.java"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/src/com/stacktips/view/CustomCalendarView.java"
             line="252"
             column="27"/>
     </issue>
@@ -422,7 +422,7 @@
         errorLine1="        android:text=&quot;MONTH 2014&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/custom_calendar_title_layout.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/custom_calendar_title_layout.xml"
             line="28"
             column="9"/>
     </issue>
@@ -438,7 +438,7 @@
         errorLine1="        android:text=&quot;SUN&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
             line="15"
             column="9"/>
     </issue>
@@ -454,7 +454,7 @@
         errorLine1="        android:text=&quot;MON&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
             line="22"
             column="9"/>
     </issue>
@@ -470,7 +470,7 @@
         errorLine1="        android:text=&quot;TUE&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
             line="29"
             column="9"/>
     </issue>
@@ -486,7 +486,7 @@
         errorLine1="        android:text=&quot;WED&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
             line="36"
             column="9"/>
     </issue>
@@ -502,7 +502,7 @@
         errorLine1="        android:text=&quot;THU&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
             line="43"
             column="9"/>
     </issue>
@@ -518,7 +518,7 @@
         errorLine1="        android:text=&quot;FRI&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
             line="50"
             column="9"/>
     </issue>
@@ -534,7 +534,7 @@
         errorLine1="        android:text=&quot;SAT&quot;"
         errorLine2="        ~~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/custom_calendar_weeks_layout.xml"
             line="57"
             column="9"/>
     </issue>
@@ -550,7 +550,7 @@
         errorLine1="            android:text=&quot;1&quot;"
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
             line="24"
             column="13"/>
     </issue>
@@ -566,7 +566,7 @@
         errorLine1="            android:text=&quot;2&quot;"
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
             line="45"
             column="13"/>
     </issue>
@@ -582,7 +582,7 @@
         errorLine1="            android:text=&quot;3&quot;"
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
             line="68"
             column="13"/>
     </issue>
@@ -598,7 +598,7 @@
         errorLine1="            android:text=&quot;4&quot;"
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
             line="89"
             column="13"/>
     </issue>
@@ -614,7 +614,7 @@
         errorLine1="            android:text=&quot;5&quot;"
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
             line="109"
             column="13"/>
     </issue>
@@ -630,7 +630,7 @@
         errorLine1="            android:text=&quot;6&quot;"
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
             line="129"
             column="13"/>
     </issue>
@@ -646,7 +646,7 @@
         errorLine1="            android:text=&quot;7&quot;"
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_1.xml"
             line="149"
             column="13"/>
     </issue>
@@ -662,7 +662,7 @@
         errorLine1="            android:text=&quot;8&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
             line="26"
             column="13"/>
     </issue>
@@ -678,7 +678,7 @@
         errorLine1="            android:text=&quot;9&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
             line="45"
             column="13"/>
     </issue>
@@ -694,7 +694,7 @@
         errorLine1="            android:text=&quot;10&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
             line="64"
             column="13"/>
     </issue>
@@ -710,7 +710,7 @@
         errorLine1="            android:text=&quot;11&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
             line="83"
             column="13"/>
     </issue>
@@ -726,7 +726,7 @@
         errorLine1="            android:text=&quot;12&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
             line="102"
             column="13"/>
     </issue>
@@ -742,7 +742,7 @@
         errorLine1="            android:text=&quot;13&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
             line="121"
             column="13"/>
     </issue>
@@ -758,7 +758,7 @@
         errorLine1="            android:text=&quot;14&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_2.xml"
             line="140"
             column="13"/>
     </issue>
@@ -774,7 +774,7 @@
         errorLine1="            android:text=&quot;15&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
             line="26"
             column="13"/>
     </issue>
@@ -790,7 +790,7 @@
         errorLine1="            android:text=&quot;16&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
             line="45"
             column="13"/>
     </issue>
@@ -806,7 +806,7 @@
         errorLine1="            android:text=&quot;17&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
             line="64"
             column="13"/>
     </issue>
@@ -822,7 +822,7 @@
         errorLine1="            android:text=&quot;18&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
             line="83"
             column="13"/>
     </issue>
@@ -838,7 +838,7 @@
         errorLine1="            android:text=&quot;19&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
             line="102"
             column="13"/>
     </issue>
@@ -854,7 +854,7 @@
         errorLine1="            android:text=&quot;20&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
             line="121"
             column="13"/>
     </issue>
@@ -870,7 +870,7 @@
         errorLine1="            android:text=&quot;21&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_3.xml"
             line="141"
             column="13"/>
     </issue>
@@ -886,7 +886,7 @@
         errorLine1="            android:text=&quot;22&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
             line="26"
             column="13"/>
     </issue>
@@ -902,7 +902,7 @@
         errorLine1="            android:text=&quot;23&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
             line="46"
             column="13"/>
     </issue>
@@ -918,7 +918,7 @@
         errorLine1="            android:text=&quot;24&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
             line="68"
             column="13"/>
     </issue>
@@ -934,7 +934,7 @@
         errorLine1="            android:text=&quot;25&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
             line="87"
             column="13"/>
     </issue>
@@ -950,7 +950,7 @@
         errorLine1="            android:text=&quot;26&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
             line="108"
             column="13"/>
     </issue>
@@ -966,7 +966,7 @@
         errorLine1="            android:text=&quot;27&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
             line="127"
             column="13"/>
     </issue>
@@ -982,7 +982,7 @@
         errorLine1="            android:text=&quot;28&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_4.xml"
             line="146"
             column="13"/>
     </issue>
@@ -998,7 +998,7 @@
         errorLine1="            android:text=&quot;29&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
             line="26"
             column="13"/>
     </issue>
@@ -1014,7 +1014,7 @@
         errorLine1="            android:text=&quot;30&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
             line="47"
             column="13"/>
     </issue>
@@ -1030,7 +1030,7 @@
         errorLine1="            android:text=&quot;31&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
             line="69"
             column="13"/>
     </issue>
@@ -1046,7 +1046,7 @@
         errorLine1="            android:text=&quot;32&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
             line="89"
             column="13"/>
     </issue>
@@ -1062,7 +1062,7 @@
         errorLine1="            android:text=&quot;33&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
             line="108"
             column="13"/>
     </issue>
@@ -1078,7 +1078,7 @@
         errorLine1="            android:text=&quot;34&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
             line="129"
             column="13"/>
     </issue>
@@ -1094,7 +1094,7 @@
         errorLine1="            android:text=&quot;35&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_5.xml"
             line="148"
             column="13"/>
     </issue>
@@ -1110,7 +1110,7 @@
         errorLine1="            android:text=&quot;36&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
             line="26"
             column="13"/>
     </issue>
@@ -1126,7 +1126,7 @@
         errorLine1="            android:text=&quot;37&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
             line="45"
             column="13"/>
     </issue>
@@ -1142,7 +1142,7 @@
         errorLine1="            android:text=&quot;38&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
             line="64"
             column="13"/>
     </issue>
@@ -1158,7 +1158,7 @@
         errorLine1="            android:text=&quot;39&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
             line="83"
             column="13"/>
     </issue>
@@ -1174,7 +1174,7 @@
         errorLine1="            android:text=&quot;40&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
             line="102"
             column="13"/>
     </issue>
@@ -1190,7 +1190,7 @@
         errorLine1="            android:text=&quot;41&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
             line="121"
             column="13"/>
     </issue>
@@ -1206,7 +1206,7 @@
         errorLine1="            android:text=&quot;42&quot; />"
         errorLine2="            ~~~~~~~~~~~~~~~~~">
         <location
-            file="/home/su/all projects backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
+            file="/home/su/all_projects_backup/SexRendez-Vous/library/res/layout/roboto_calendar_week_6.xml"
             line="140"
             column="13"/>
     </issue>

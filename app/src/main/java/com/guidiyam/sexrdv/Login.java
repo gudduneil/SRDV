@@ -193,7 +193,7 @@ TextView txtsignup;
             @Override
             public void onClick(View v) {
 
-
+                pbar.setVisibility(View.VISIBLE);
                 signIn();
             }
         });
@@ -484,7 +484,7 @@ TextView txtsignup;
                             @Override
                             public void onCancel() {
                                 //progressBar.setVisibility(View.INVISIBLE);
-                                fb.performClick();
+                                //fb.performClick();
 //                                     if(sharedPreferences2.getString("lang", " ").equals("eng"))
 //                                    Toast.makeText(Login.this, "Login Cancel", Toast.LENGTH_LONG).show();
 //                                    else if(sharedPreferences2.getString("lang", " ").equals("ita"))
@@ -499,7 +499,7 @@ TextView txtsignup;
                                     if (AccessToken.getCurrentAccessToken() != null) {
                                         //progressBar.setVisibility(View.GONE);
                                         LoginManager.getInstance().logOut();
-                                        fb.performClick();
+                                        //fb.performClick();
                                     }
                                 }
 
@@ -579,6 +579,7 @@ rl_login.setBackgroundResource(R.drawable.french_login);
 
                 //Toast.makeText(Login.this,"Success block is called",Toast.LENGTH_LONG).show();
                 // Google Sign In was successful, authenticate with Firebase
+
                 GoogleSignInAccount account = result.getSignInAccount();
                 firebaseAuthWithGoogle(account);
             } else {
@@ -650,6 +651,7 @@ rl_login.setBackgroundResource(R.drawable.french_login);
         protected void onPreExecute() {
 
             super.onPreExecute();
+            pbar.setVisibility(View.VISIBLE);
            // progressBar.setVisibility(View.VISIBLE);
 
         }
@@ -776,7 +778,8 @@ rl_login.setBackgroundResource(R.drawable.french_login);
                     editor.putString("register_type","2");
                     editor.putString("HomePage","Login");
                     editor.putString("first_time","true");
-                    editor.putString("app_password_status", AppData.app_password_status);
+                    editor.putString("app_password_status","false");
+                    //editor.putString("app_password_status", AppData.app_password_status);
                     editor.putString("app_password", AppData.app_password);
 //                    ////////////////////////////////////////////////////////
 //
@@ -819,6 +822,7 @@ rl_login.setBackgroundResource(R.drawable.french_login);
         protected void onPostExecute(Void resultt)
         {
             super.onPostExecute(resultt);
+            pbar.setVisibility(View.GONE);
            // progressBar.setVisibility(View.INVISIBLE);
 
            if(status1==true)
@@ -1403,7 +1407,8 @@ rl_signup.setBackgroundResource(R.drawable.frech_signup);
                     editor.putString("register_type","2");
                     editor.putString("HomePage","Login");
                     editor.putString("first_time","true");
-                    editor.putString("app_password_status",AppData. app_password_status);
+                   // editor.putString("app_password_status",AppData. app_password_status);
+                    editor.putString("app_password_status","false");
                     editor.putString("app_password",AppData. app_password);
                     editor.commit();
 
@@ -1593,7 +1598,8 @@ if(status1==true) {
                     editor.putString("first_time","true");
 
                     editor.putString("app_password",AppData.app_password);
-                    editor.putString("app_password_status",AppData.app_password_status);
+                   // editor.putString("app_password_status",AppData.app_password_status);
+                    editor.putString("app_password_status","false");
                     editor.commit();
 
 
@@ -1782,8 +1788,8 @@ if(status1==true) {
                         editor.putString("first_time","true");
 
                         editor.putString("app_password",AppData.app_password);
-                        editor.putString("app_password_status",AppData.app_password_status);
-
+                       // editor.putString("app_password_status",AppData.app_password_status);
+                        editor.putString("app_password_status","false");
                         editor.commit();
 
 //if(app_password_status.equals("0"))
@@ -1902,7 +1908,8 @@ if(status1==true) {
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
+                        if (task.isSuccessful())
+                        {
                             // Sign in success, update UI with the signed-in user's information
 
                             Log.d(TAG, "signInWithCredential:success");
@@ -1944,50 +1951,7 @@ if(status1==true) {
     }
 
 
-    private void handleSignInResult(GoogleSignInResult result)
-    {
-        Log.d(TAG, "handleSignInResult:" + result.isSuccess());
-        if (result.isSuccess()) {
-            // Signed in successfully, show authenticated UI.
-            GoogleSignInAccount acct = result.getSignInAccount();
 
-            Log.e(TAG, "display name: " + acct.getDisplayName());
-
-             GooglepersonName = acct.getDisplayName();
-             GooglePhotoUrl = acct.getPhotoUrl().toString();
-           GoogleEmail = acct.getEmail();
-           String tokenid= acct.getIdToken();
-           String google_id= acct.getId();
-
-            if(result.isSuccess()==true)
-
-            {
-                new Asyntask_google_signup().execute();
-                //Toast.makeText(Login.this,"Go to Asyntask Page",Toast.LENGTH_SHORT).show();
-
-//                Log.e(TAG, "Name: " + GooglepersonName + ", email: " + GoogleEmail
-//                        + ", Image: " + GooglePhotoUrl + ", Tokenid=" + tokenid + ", Google id" + google_id);
-
-
-            }
-//            Intent i=new Intent(Login.this,HomePage.class);
-//            startActivity(i);
-//            finish();
-
-//            txtName.setText(personName);
-//            txtEmail.setText(email);
-//            Glide.with(getApplicationContext()).load(personPhotoUrl)
-//                    .thumbnail(0.5f)
-//                    .crossFade()
-//                    .diskCacheStrategy(DiskCacheStrategy.ALL)
-//                    .into(imgProfilePic);
-
-            // updateUI(true);
-        } else {
-            // Signed out, show unauthenticated UI.
-            //updateUI(false);
-        }
-    }
     private class Asyntask_google_signup extends AsyncTask<Void, Void, Void>
     {
         JSONObject response1;
@@ -2004,7 +1968,7 @@ if(status1==true) {
         protected void onPreExecute() {
 
             super.onPreExecute();
-             pbar.setVisibility(View.VISIBLE);
+
 
         }
 
@@ -2131,7 +2095,8 @@ if(status1==true) {
                     editor.putString("first_time","true");
 
                     editor.putString("app_password",AppData.app_password);
-                    editor.putString("app_password_status",AppData.app_password_status);
+                   // editor.putString("app_password_status",AppData.app_password_status);
+                    editor.putString("app_password_status","false");
 //                    ////////////////////////////////////////////////////////
 //
 //                    editor.putString("devicetoken",AppData.devicetoken );

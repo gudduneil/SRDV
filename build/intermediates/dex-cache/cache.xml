@@ -3,21 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="/home/su/all_projects_backup/SexRendez-Vous/app/libs/volley.jar"
+        jar="/home/su/all_projects_backup/SexRendez-Vous/app/libs/systembartint-1.0.4.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="d4aaa36e04ee71a83444f8367c97a46fda662d2c">
-        <dex dex="/home/su/all_projects_backup/SexRendez-Vous/app/build/intermediates/transforms/dex/debug/folders/1000/2/volley_4d3bd08c80b0e63dcb035841adfee0e291e2f869/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/su/all_projects_backup/SexRendez-Vous/app/libs/httpclient-4.5.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a1e6cbb3cc2c5f210dd1310ff9fcb2c09c0d1438">
-        <dex dex="/home/su/all_projects_backup/SexRendez-Vous/app/build/intermediates/transforms/dex/debug/folders/1000/2/httpclient-4.5_29cc4942f421a0a02669bb5c0595c3a549410470/classes.dex" />
+        sha1="06404f77b92ec723cc132e825afe85a07da85ee6">
+        <dex dex="/home/su/all_projects_backup/SexRendez-Vous/app/build/intermediates/transforms/dex/debug/folders/1000/2/systembartint-1.0.4_2f77de80e0bc91322d297de4e80d399331411c8b/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -30,24 +21,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/default/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="25b245caccd262cdd104fecb77d15835e1b120d3">
-        <dex dex="/home/su/all_projects_backup/SexRendez-Vous/app/build/intermediates/transforms/dex/debug/folders/1000/4/classes_09a594c2a01793acef9df7e7848ad0c533261183/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/su/all_projects_backup/SexRendez-Vous/app/libs/systembartint-1.0.4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="06404f77b92ec723cc132e825afe85a07da85ee6">
-        <dex dex="/home/su/all_projects_backup/SexRendez-Vous/app/build/intermediates/transforms/dex/debug/folders/1000/2/systembartint-1.0.4_2f77de80e0bc91322d297de4e80d399331411c8b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/su/all_projects_backup/SexRendez-Vous/app/libs/apache-mime4j-0.6.jar"
         jumboMode="false"
         optimize="true"
@@ -57,12 +30,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/su/all_projects_backup/SexRendez-Vous/app/libs/volley.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d4aaa36e04ee71a83444f8367c97a46fda662d2c">
+        <dex dex="/home/su/all_projects_backup/SexRendez-Vous/app/build/intermediates/transforms/dex/debug/folders/1000/2/volley_4d3bd08c80b0e63dcb035841adfee0e291e2f869/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/su/all_projects_backup/SexRendez-Vous/app/libs/httpmime-4.3.6.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="cf8bacbf0d476c7f2221f861269365b66447f7ec">
         <dex dex="/home/su/all_projects_backup/SexRendez-Vous/app/build/intermediates/transforms/dex/debug/folders/1000/2/httpmime-4.3.6_975db1961be9170c1b9b5ad0b5fd3d514d3b3d4e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/su/all_projects_backup/SexRendez-Vous/library/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="25b245caccd262cdd104fecb77d15835e1b120d3">
+        <dex dex="/home/su/all_projects_backup/SexRendez-Vous/app/build/intermediates/transforms/dex/debug/folders/1000/4/classes_09a594c2a01793acef9df7e7848ad0c533261183/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/su/all_projects_backup/SexRendez-Vous/app/libs/httpclient-4.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a1e6cbb3cc2c5f210dd1310ff9fcb2c09c0d1438">
+        <dex dex="/home/su/all_projects_backup/SexRendez-Vous/app/build/intermediates/transforms/dex/debug/folders/1000/2/httpclient-4.5_29cc4942f421a0a02669bb5c0595c3a549410470/classes.dex" />
     </item>
 
 </items>

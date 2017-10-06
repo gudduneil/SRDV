@@ -3,6 +3,7 @@ package com.guidiyam.sexrdv;
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -20,6 +21,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Base64;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -34,6 +36,8 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.guidiyam.sexrdv.Adapter.SelectUserAdapter;
 //import com.guidiyam.sexrdv.Adapter.SelectUserAdapter2;
 import com.guidiyam.sexrdv.helper.ConnectionDetector;
@@ -52,6 +56,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -62,6 +67,10 @@ public class ActivityPartner extends AppCompatActivity {
 
 
     ImageView bck;
+    JSONObject jsonObject;
+    String encoded="";
+    JSONArray jsonArray;
+    SharedPreferences.Editor contactselectededitor;
 
     String number = "",id="",image_thumb="";
     String numberIndex="",EmailAddress="";
@@ -76,8 +85,8 @@ public class ActivityPartner extends AppCompatActivity {
     EditText SearchText;
     RelativeLayout pbar;
 
-    SharedPreferences sharedPreferences;
-    JSONArray jsonArray;
+    SharedPreferences sharedPreferences,sharedPreferences2;
+    //JSONArray jsonArray;
     public int partner_count=0;
 
     ConnectionDetector cd;
@@ -108,6 +117,14 @@ public class ActivityPartner extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
         sharedPreferences=getSharedPreferences("logindetails", Context.MODE_PRIVATE);
+
+        sharedPreferences2 = getSharedPreferences("shareprefcontactlist", MODE_PRIVATE);
+        String json = sharedPreferences2.getString("contactlist", " ");
+        Gson gson = new Gson();
+        Type type = new TypeToken<ArrayList<ContactList_getset>>() {}.getType();
+        AppData.arrayList=new ArrayList<ContactList_getset>();
+        AppData.arrayList = gson.fromJson(json, type);
+
         cd=new ConnectionDetector(this);
 
         SearchText = (EditText)findViewById(R.id.inputSearch);
@@ -119,81 +136,120 @@ public class ActivityPartner extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(partner_count==0)
+                if(cd.isConnectingToInternet())
                 {
+                    if (partner_count == 0)
+                    {
 
+                       // AppData.buttonforseeingpartner=true;
+                        Log.d("1", "Activity");
+                        AppData.partnerclick = true;
+                        Intent i = new Intent(ActivityPartner.this, HomePage.class);
+                        i.putExtra("HomePage", "Partner");
+                        startActivity(i);
+                        //finishAffinity();
+                         finish();
+                    } else
+                        {
+                           // AppData.buttonforseeingpartner=true;
 
-                    Log.d("1","Activity");
-                   // AppData.isFirst_time=false;
-//                    AppData.contactarraylistforfilter = new ArrayList<ContactList_getset>();
-//                    AppData.contactarraylistforfilter.clear();
-//                    AppData.contactarraylistforfilter.addAll(AppData.contactarraylistforfilter2);
-                    AppData.partnerclick=true;
-                    Intent i=new Intent(ActivityPartner.this,HomePage.class);
-                    i.putExtra("HomePage","Partner");
-                    startActivity(i);
-                    finishAffinity();
-                   // finish();
-                }
-                else{
+                            Log.d("GOTOELSE","GOTOELSE BLOCK");
+                            AppData.partnerclick = true;
 
-                    int p = 0;
-                    jsonArray = new JSONArray();
+                        int p = 0;
+                       jsonArray = new JSONArray();
 
-                    for (int i = 0; i < AppData.contactarraylist.size(); i++) {
+                        for (int i = 0; i < AppData.arrayList.size(); i++)
+                        {
 
-                        if (AppData.contactarraylist.get(i).isTouch() == true) {
+                            if (AppData.arrayList.get(i).isTouch() == true)
+                            {
 
-                            JSONObject jsonObject = new JSONObject();
-                            try {
-                                jsonObject.put("name", AppData.contactarraylist.get(i).getName());
-                                jsonObject.put("phone", AppData.contactarraylist.get(i).getNumber().toString().trim());
-                                jsonObject.put("email", AppData.contactarraylist.get(i).getEmail().toString().trim());
+                                Log.d("GOTOELSE","TRUE");
+                                Log.d("name", AppData.arrayList.get(i).getName());
+                                Log.d("phone", AppData.arrayList.get(i).getNumber().toString().trim());
+                                Log.d("email", AppData.arrayList.get(i).getEmail().toString().trim());
 
-                                if (AppData.contactarraylist.get(i).getImage() != null) {
+                                jsonObject = new JSONObject();
+                                try {
 
-                                    try {
-                                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(ActivityPartner.this.getContentResolver(), Uri.parse(AppData.contactarraylist.get(i).getImage()));
+                                    if (AppData.arrayList.get(i).getImage() != null && !AppData.arrayList.get(i).getImage().equals(""))
+                                    {
+                                       // Toast.makeText(ActivityPartner.this,"Go to if block",Toast.LENGTH_SHORT).show();
 
-                                        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-                                        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
-                                        byte[] byteArray = byteArrayOutputStream.toByteArray();
+                                        jsonObject.put("name", AppData.arrayList.get(i).getName());
+                                        jsonObject.put("phone", AppData.arrayList.get(i).getNumber().toString().trim());
+                                        jsonObject.put("email", AppData.arrayList.get(i).getEmail().toString().trim());
+                                        Log.d("image", AppData.arrayList.get(i).getImage());
 
-                                        String encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
+                                        try {
+                                            Bitmap bitmap = MediaStore.Images.Media.getBitmap(ActivityPartner.this.getContentResolver(), Uri.parse(AppData.arrayList.get(i).getImage()));
 
-                                        jsonObject.put("image", encoded.toString());
+                                            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                                            bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+                                            byte[] byteArray = byteArrayOutputStream.toByteArray();
 
-                                    } catch (IOException e) {
-                                        e.printStackTrace();
+                                            encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
+
+                                            jsonObject.put("image", encoded.toString());
+
+                                        } catch (IOException e) {
+                                            e.printStackTrace();
+                                        }
+                                    } else
+                                        {
+                                            //Toast.makeText(ActivityPartner.this,"Go to else block",Toast.LENGTH_SHORT).show();
+                                            jsonObject.put("name", AppData.arrayList.get(i).getName());
+                                            jsonObject.put("phone", AppData.arrayList.get(i).getNumber().toString().trim());
+                                            jsonObject.put("email", AppData.arrayList.get(i).getEmail().toString().trim());
+                                            jsonObject.put("image", "");
+
                                     }
+
+
+                                    jsonArray.put(p, jsonObject);
+                                    //////////////////////////////////////////////////////////////
+
+                                    Gson gson = new Gson();
+                                    String jsoncontactlist = gson.toJson( AppData.partnerjsonarrayforaddinglist);
+                                    contactselectededitor = getSharedPreferences("shareprefselectedcontactlist", MODE_PRIVATE).edit();
+                                    contactselectededitor.putString("selectedcontactlist", jsoncontactlist);
+                                    contactselectededitor.commit();
+                                    /////////////////////////////////////////////////////////////
+
+                                    p++;
+
+
+//                                    Intent i2=new Intent(ActivityPartner.this,HomePage.class);
+//                                    i2.putExtra("HomePage","Partner");
+//                                    startActivity(i2);
+//                                    //finishAffinity();
+//                                    finish();
+
+
+                                } catch (JSONException e)
+                                {
+                                    e.printStackTrace();
                                 }
-
-                                jsonArray.put(p, jsonObject);
-
-                                p++;
-
-
-                            } catch (JSONException e) {
-                                e.printStackTrace();
                             }
+
                         }
+                            Log.d("Data", "::::::" +  jsonArray.toString());
+                            pbar.setVisibility(View.VISIBLE);
+                            sendContacts();
+
+
                     }
-
-                    Log.d("Data", "::::::" + jsonArray.toString());
-
-                    pbar.setVisibility(View.VISIBLE);
-
-                    if(cd.isConnectingToInternet()){
-
-                    sendContacts();
-
-                    } else {
+                }
+                else {
 
                     Toast.makeText(ActivityPartner.this, getResources().getString(R.string.internet_conn), Toast.LENGTH_SHORT).show();
                     }
 
                 }
-            }
+
+
+
         });
 
 
@@ -210,26 +266,9 @@ public class ActivityPartner extends AppCompatActivity {
             {
                 String text = SearchText.getText().toString().toLowerCase(Locale.getDefault());
                 Log.d("TEXT",text);
-              //  if(text.length()>0) {
-
-                    //SelectUserAdapter.getFilter().filter(text);
+                adapter.filter(text);
 
 
-                    adapter.filter(text);
-
-//                adapter = new SelectUserAdapter(AppData.contactarraylist, ActivityPartner.this);
-//                rv_contact.setAdapter(adapter);
-               // adapter.notifyDataSetChanged();
-
-                   // adapter.notifyDataSetChanged();
-              //  }
-//                else {
-//                    //adapter.notifyDataSetChanged();
-//                    //Toast.makeText(ActivityPartner.this,"txt length is zero",Toast.LENGTH_SHORT).show();
-////                        adapter = new SelectUserAdapter(AppData.contactarraylist, ActivityPartner.this);
-////                        rv_contact.setAdapter(adapter);
-//                    //notifyDataSetChanged();
-//                }
             }
 
             @Override
@@ -241,6 +280,57 @@ public class ActivityPartner extends AppCompatActivity {
             }
         });
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+       // sharedPreferences2 = getSharedPreferences("shareprefcontactlist", MODE_PRIVATE);
+
+
+
+        if( AppData.arrayList.size()>0)
+        {
+            //AppData.newContactList_getsets = new ArrayList<NewContactList_getset>();
+            if(AppData.selectp==false)
+            {
+
+                AppData.selectp=true;
+                AppData.newContactList_getsets = new ArrayList<NewContactList_getset>();
+                for (int i = 0; i < AppData.arrayList.size(); i++)
+
+
+                {
+
+                    String name = AppData.arrayList.get(i).getName();
+                    String number = AppData.arrayList.get(i).getNumber();
+                    String image = AppData.arrayList.get(i).getImage();
+                    String email = AppData.arrayList.get(i).getEmail();
+                    //boolean touch= AppData.arrayList.get(i).isTouch();
+
+                    NewContactList_getset a = new NewContactList_getset(name, number, image, email, false);
+                    AppData.newContactList_getsets.add(a);
+
+
+                    Log.d("Contactlistsize", "1 " + String.valueOf(AppData.arrayList.size()));
+
+
+                }
+
+                adapter = new SelectUserAdapter(AppData.newContactList_getsets, ActivityPartner.this);
+                rv_contact.setAdapter(adapter);
+
+
+            }
+            else
+            {
+                adapter = new SelectUserAdapter(AppData.newContactList_getsets, ActivityPartner.this);
+                rv_contact.setAdapter(adapter);
+
+            }
+
+
+
+        }
     }
 
 
@@ -258,20 +348,20 @@ public class ActivityPartner extends AppCompatActivity {
                 try {
                     JSONObject jsonObject=new JSONObject(s);
 
-                    if(jsonObject.getBoolean("status")==true){
+                   // if(jsonObject.getBoolean("status")==true){
 
                         Toast.makeText(ActivityPartner.this,""+jsonObject.getString("message"),Toast.LENGTH_SHORT).show();
 
-                        AppData.partnerclick=true;
+                        //AppData.partnerclick=true;
                         Intent i=new Intent(ActivityPartner.this,HomePage.class);
                         i.putExtra("HomePage","Partner");
                         startActivity(i);
-                        finishAffinity();
-                        //finish();
+                        //finishAffinity();
+                        finish();
 
                         pbar.setVisibility(View.GONE);
 
-                    }
+                   // }
                 } catch (JSONException e) {
                     e.printStackTrace();
                     pbar.setVisibility(View.GONE);
@@ -314,51 +404,151 @@ public class ActivityPartner extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-       // AppData.contactarraylistforfilter=new ArrayList<ContactList_getset>();
-//        AppData.contactarraylistforfilter.clear();
 
-
-        //AppData.contactarraylistforfilter.addAll(AppData.contactarraylist);
-        //Log.d("Contactlistsize", String.valueOf(AppData.contactarraylist.size()));
-        if(AppData.contactarraylist.size()>0)
-        {
-            newContactList_getsets=new ArrayList<NewContactList_getset>();
-            for(int i=0;i<AppData.contactarraylist.size();i++)
-
-
-           {
-
-               String name=AppData.contactarraylist.get(i).getName();
-               String number=AppData.contactarraylist.get(i).getNumber();
-               String image=AppData.contactarraylist.get(i).getImage();
-               String email=AppData.contactarraylist.get(i).getEmail();
-               boolean touch=AppData.contactarraylist.get(i).isTouch();
-
-               NewContactList_getset a=new NewContactList_getset(name,number,image,email,touch);
-               newContactList_getsets.add(a);
-
-
-                Log.d("Contactlistsize", "1 "+String.valueOf(AppData.contactarraylist.size()));
-
-
-           }
-
-            adapter = new SelectUserAdapter(newContactList_getsets, ActivityPartner.this);
-            rv_contact.setAdapter(adapter);
-
-//            else
-//            {
-//                Log.d("Contactlistsize", "2 "+String.valueOf(AppData.contactarraylistforfilter.size()));
-//                                adapter = new SelectUserAdapter(AppData.contactarraylistforfilter, ActivityPartner.this);
-//                rv_contact.setAdapter(adapter);
-////
+//        dialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
+//            @Override
+//            public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
+//                if (keyCode == KeyEvent.KEYCODE_BACK) {
+//                    // DO WHAT YOU WANT ON BACK PRESSED
+//                    return true;
+//                }
+//                return false;
 //            }
+//        });
+//
 
+    }
+
+
+
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+
+           // moveTaskToBack(true);
+            if(cd.isConnectingToInternet())
+            {
+                if (partner_count == 0)
+                {
+
+
+                    Log.d("1", "Activity");
+
+                   // AppData.buttonforseeingpartner=true;
+                    AppData.partnerclick = true;
+                    Intent i1 = new Intent(ActivityPartner.this, HomePage.class);
+                    i1.putExtra("HomePage", "Partner");
+                    startActivity(i1);
+                    //finishAffinity();
+                     finish();
+                } else {
+                    //AppData.buttonforseeingpartner=true;
+                    AppData.partnerclick = true;
+                    int p = 0;
+                    jsonArray = new JSONArray();
+
+                    for (int i = 0; i < AppData.arrayList.size(); i++) {
+
+                        if (AppData.arrayList.get(i).isTouch() == true)
+                        {
+
+
+                            Log.d("name", AppData.arrayList.get(i).getName());
+                            Log.d("phone", AppData.arrayList.get(i).getNumber().toString().trim());
+                            Log.d("email", AppData.arrayList.get(i).getEmail().toString().trim());
+
+                            jsonObject = new JSONObject();
+                            try {
+                                // jsonObject.put("id",AppData.arrayList.get(i).getI);
+
+
+//
+//                                if(AppData.arrayList.get(i).getImage().equals(""))
+//                                {
+//                                    Log.d("image", AppData.arrayList.get(i).getImage());
+//
+//                                    jsonObject.put("image", "");
+//
+//                                }
+
+                                if (AppData.arrayList.get(i).getImage() != null && !AppData.arrayList.get(i).getImage().equals(""))
+                                {
+                                    // Toast.makeText(ActivityPartner.this,"Go to if block",Toast.LENGTH_SHORT).show();
+
+                                    jsonObject.put("name", AppData.arrayList.get(i).getName());
+                                    jsonObject.put("phone", AppData.arrayList.get(i).getNumber().toString().trim());
+                                    jsonObject.put("email", AppData.arrayList.get(i).getEmail().toString().trim());
+                                    Log.d("image", AppData.arrayList.get(i).getImage());
+
+                                    try {
+                                        Bitmap bitmap = MediaStore.Images.Media.getBitmap(ActivityPartner.this.getContentResolver(), Uri.parse(AppData.arrayList.get(i).getImage()));
+
+                                        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                                        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+                                        byte[] byteArray = byteArrayOutputStream.toByteArray();
+
+                                        encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
+
+                                        jsonObject.put("image", encoded.toString());
+
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                } else
+                                {
+                                    //Toast.makeText(ActivityPartner.this,"Go to else block",Toast.LENGTH_SHORT).show();
+                                    jsonObject.put("name", AppData.arrayList.get(i).getName());
+                                    jsonObject.put("phone", AppData.arrayList.get(i).getNumber().toString().trim());
+                                    jsonObject.put("email", AppData.arrayList.get(i).getEmail().toString().trim());
+                                    jsonObject.put("image", "");
+
+                                }
+
+
+                                jsonArray.put(p, jsonObject);
+                                ///////////////////////////////////////////////////////////////////////////////////
+
+                                Gson gson = new Gson();
+                                String jsoncontactlist = gson.toJson( AppData.partnerjsonarrayforaddinglist);
+                                contactselectededitor = getSharedPreferences("shareprefselectedcontactlist", MODE_PRIVATE).edit();
+                                contactselectededitor.putString("selectedcontactlist", jsoncontactlist);
+                                contactselectededitor.commit();
+
+                                ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                                p++;
+
+//                                AppData.partnerclick=true;
+//                                Intent i2=new Intent(ActivityPartner.this,HomePage.class);
+//                                i2.putExtra("HomePage","Partner");
+//                                startActivity(i2);
+//                                //finishAffinity();
+//                                finish();
+
+
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+
+                    Log.d("Data", "::::::" +  jsonArray.toString());
+
+                    pbar.setVisibility(View.VISIBLE);
+
+
+                    sendContacts();
+
+                }
+            }
+            else {
+
+                Toast.makeText(ActivityPartner.this, getResources().getString(R.string.internet_conn), Toast.LENGTH_SHORT).show();
+            }
+            return true;
         }
-
-
-
-
-
+        return super.onKeyDown(keyCode, event);
     }
 }

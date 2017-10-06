@@ -54,6 +54,7 @@ public class ActivitySetting extends AppCompatActivity {
 private AlertDialog alert11;
     String app_password_status;
     boolean aswitchon=false;
+    SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,7 +90,14 @@ private AlertDialog alert11;
                     if(!sharedPreferences.getString("app_password", " ").equals(""))
 
                     {
-                        new UpdateAppPin_status().execute();
+
+
+                        editor = getSharedPreferences("logindetails", MODE_PRIVATE).edit();
+                        editor.putString("app_password_status", "true");
+                        //editor.putString("app_password",conpin);
+
+                        editor.commit();
+                        //new UpdateAppPin_status().execute();
                     }
                     else{
                         aSwitch1.setChecked(false);
@@ -111,7 +119,12 @@ private AlertDialog alert11;
                     if(!sharedPreferences.getString("app_password", " ").equals(""))
 
                     {
-                        new UpdateAppPin_status().execute();
+                        //new UpdateAppPin_status().execute();
+                        editor = getSharedPreferences("logindetails", MODE_PRIVATE).edit();
+                        editor.putString("app_password_status", "false");
+                        //editor.putString("app_password",conpin);
+
+                        editor.commit();
                     }
                     else{
                         aSwitch1.setChecked(false);
@@ -538,7 +551,7 @@ private AlertDialog alert11;
         sharedPreferences = getSharedPreferences("logindetails", MODE_PRIVATE);
 
 
-        if(sharedPreferences.getString("app_password_status", " ").equals("0"))
+        if(sharedPreferences.getString("app_password_status", " ").equals("false"))
         {
 
             aSwitch1.setChecked(false);

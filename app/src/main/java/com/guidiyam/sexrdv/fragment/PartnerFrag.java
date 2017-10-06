@@ -20,6 +20,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.guidiyam.sexrdv.ActivityNewMeeting;
 import com.guidiyam.sexrdv.ActivityPartner;
 import com.guidiyam.sexrdv.Adapter.ContactAdapter;
@@ -45,6 +48,7 @@ import com.guidiyam.sexrdv.Login;
 import com.guidiyam.sexrdv.R;
 import com.guidiyam.sexrdv.helper.ConnectionDetector;
 import com.guidiyam.sexrdv.service.ContactService;
+import com.guidiyam.sexrdv.setget.ContactList_getset;
 import com.guidiyam.sexrdv.setget.ContactSetGet;
 import com.guidiyam.sexrdv.setget.PartnerSetGet;
 import com.guidiyam.sexrdv.volley.AppData;
@@ -55,9 +59,12 @@ import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import static android.content.Context.MODE_PRIVATE;
 
 /**
  * Created by su on 19/7/17.
@@ -71,9 +78,9 @@ public class PartnerFrag extends Fragment {
     TextView no_data;
     RelativeLayout pbar;
     ConnectionDetector cd;
-    SharedPreferences sharedPreferences;
+    SharedPreferences sharedPreferences,sharedPreferences2,sharedPreferences3;
     TextView save;
-    public int partner_count=0;
+    public int frag_count=0;
 
 
 
@@ -84,6 +91,14 @@ public class PartnerFrag extends Fragment {
     {
 
         View view = inflater.inflate(R.layout.frag_partner, container, false);
+        ///////////////////////////////////////////////////////////////////
+//        sharedPreferences3 = getActivity().getSharedPreferences("shareprefcontactlist", MODE_PRIVATE);
+//        String json = sharedPreferences3.getString("contactlist", " ");
+//        Gson gson = new Gson();
+//        Type type = new TypeToken<ArrayList<ContactList_getset>>() {}.getType();
+//        AppData.arrayList=new ArrayList<ContactList_getset>();
+//        AppData.arrayList = gson.fromJson(json, type);
+        //////////////////////////////////////////////////////////
 
         no_data= (TextView) view.findViewById(R.id.no_data);
         no_data.setVisibility(View.GONE);
@@ -98,11 +113,16 @@ public class PartnerFrag extends Fragment {
 
         AppData.page="PartnerFrag";
         Log.d("Pageforsevice:",AppData.page);
-        sharedPreferences=getActivity().getSharedPreferences("logindetails", Context.MODE_PRIVATE);
+        sharedPreferences=getActivity().getSharedPreferences("logindetails", MODE_PRIVATE);
         cd=new ConnectionDetector(getActivity());
         save=(TextView)getActivity().findViewById(R.id.save) ;
+       // pbar.setVisibility(View.VISIBLE);
 
-        ///////////////////////////////
+        ///////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,7 +135,7 @@ public class PartnerFrag extends Fragment {
 
 
 
-                if (partner_count == 0) {
+                if (frag_count == 0) {
 
 
                     if (cd.isConnectingToInternet()) {
@@ -130,7 +150,9 @@ public class PartnerFrag extends Fragment {
                         Toast.makeText(getActivity(), getResources().getString(R.string.internet_conn), Toast.LENGTH_SHORT).show();
                     }
 
-                } else {
+                }
+
+                else {
 
                     int p = 0;
                     //jsonArray = new JSONArray();
@@ -166,7 +188,9 @@ public class PartnerFrag extends Fragment {
                         getActivity().finish();
 
 
-                    } else {
+                    }
+
+                    else {
 
                         Toast.makeText(getActivity(), getResources().getString(R.string.internet_conn), Toast.LENGTH_SHORT).show();
                     }
@@ -184,7 +208,7 @@ public class PartnerFrag extends Fragment {
 
 
 
-                    if (partner_count == 0) {
+                    if (frag_count == 0) {
 
 
                         if (cd.isConnectingToInternet()) {
@@ -201,7 +225,7 @@ public class PartnerFrag extends Fragment {
 
                     } else {
 
-                        int p =      AppData.partnerjsonarray.length();
+                        int p =      0;
                         //jsonArray = new JSONArray();
 
                         for (int i = 0; i < AppData.selectedcontact.size(); i++) {
@@ -260,45 +284,26 @@ public class PartnerFrag extends Fragment {
                     //AppData.partnerlistingpage=true;
 
                    // AppData.isFirst_time=true;
-                    Intent i = new Intent(getActivity(), ActivityPartner.class);
-                    startActivity(i);
+                    if(AppData.buttonforseeingpartner==false)
+                    {
+                        //AppData.buttonforseeingpartner=true;
+                        Intent i = new Intent(getActivity(), ActivityPartner.class);
+                        startActivity(i);
+
+                    }
+                    else if(AppData.buttonforseeingpartner==true)
+                    {
+                        Intent i = new Intent(getActivity(), ActivityPartner.class);
+                        startActivity(i);
+
+                    }
                 }
 else {
-                    Toast.makeText(getActivity(),"contacts are synced",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),"contacts are being synced",Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
-
-
-  /*      conList=new ArrayList<>();
-
-        if(AppData.selectedContact!=null) {
-            for (int i = 0; i < AppData.selectedContact.size(); i++) {
-
-                if(AppData.selectedContact.get(i).isSelect()==true){
-
-                    PartnerSetGet contactSetGet=new PartnerSetGet();
-                    contactSetGet.setImage(AppData.selectedContact.get(i).getPhone());
-                    contactSetGet.setName(AppData.selectedContact.get(i).getName());
-                    contactSetGet.setEmail(AppData.selectedContact.get(i).getEmail());
-                    conList.add(contactSetGet);
-
-                }
-
-                if(conList.size()>0){
-
-                    mAdapter = new RecyclerViewAdapter(getActivity(),conList);
-                    recyclerview.setAdapter(mAdapter);
-                }else{
-                    no_data.setVisibility(View.VISIBLE);
-                }
-
-            }
-        }else{
-            no_data.setVisibility(View.VISIBLE);
-
-        }*/
 
 
         return view;
@@ -312,21 +317,201 @@ else {
     public void onResume() {
         super.onResume();
 
+        cd=new ConnectionDetector(getActivity());
 
-        pbar.setVisibility(View.VISIBLE);
+        sharedPreferences2=getActivity().getSharedPreferences("shareprefselectedcontactlist", MODE_PRIVATE);
+        String json = sharedPreferences2.getString("selectedcontactlist", " ");
+        Gson gson = new Gson();
+        Type type = new TypeToken<ArrayList<PartnerSetGet>>() {}.getType();
 
-        if(cd.isConnectingToInternet()){
 
-            getPartners();
+
+        if(cd.isConnectingToInternet())
+        {
+            if(AppData.addextabuttonforpartner==false)
+            {
+                Toast.makeText(getActivity(),"go to if block",Toast.LENGTH_SHORT).show();
+//                AppData.selectedcontact=new ArrayList<PartnerSetGet>();
+//                AppData.selectedcontact = gson.fromJson(json, type);
+//                if(AppData.selectedcontact.size()>0) {
+//                    mAdapter = new RecyclerViewAdapter(getActivity(), AppData.selectedcontact, PartnerFrag.this);
+//                    recyclerview.setAdapter(mAdapter);
+//                }
+                getPartners();
+            }
+            else{
+                mAdapter = new RecyclerViewAdapter(getActivity(), AppData.selectedcontact, PartnerFrag.this);
+                recyclerview.setAdapter(mAdapter);
+
+            }
 
         } else {
 
             Toast.makeText(getActivity(), getResources().getString(R.string.internet_conn), Toast.LENGTH_SHORT).show();
         }
+
+        getView().setFocusableInTouchMode(true);
+        getView().requestFocus();
+        getView().setOnKeyListener(new View.OnKeyListener()
+        {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_BACK)
+                {
+                    // handle back button's click listener
+                    //Toast.makeText(getActivity(), "Back press", Toast.LENGTH_SHORT).show();
+
+
+                    if(AppData.addextabuttonforpartner==false)
+
+                    {
+
+
+
+                        if (frag_count == 0) {
+
+
+                            if (cd.isConnectingToInternet()) {
+                                Intent i2 = new Intent(getActivity(), ActivityNewMeeting.class);
+                                // i.putExtra("HomePage","Partner");
+                                startActivity(i2);
+                                getActivity().finish();
+
+
+                            } else {
+
+                                Toast.makeText(getActivity(), getResources().getString(R.string.internet_conn), Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+
+                        else {
+
+                            int p = 0;
+                            //jsonArray = new JSONArray();
+
+                            for (int i = 0; i < AppData.selectedcontact.size(); i++) {
+
+                                if (AppData.selectedcontact.get(i).isSelect() == true) {
+
+                                    JSONObject jsonObject = new JSONObject();
+                                    try {
+                                        jsonObject.put("id", AppData.selectedcontact.get(i).getId());
+                                        jsonObject.put("name", AppData.selectedcontact.get(i).getName());
+                                        jsonObject.put("image", AppData.selectedcontact.get(i).getImage());
+                                        AppData.partnerjsonarray.put(p, jsonObject);
+
+                                        p++;
+
+
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
+
+                            Log.d("Data", "::::::" + AppData.partnerjsonarray.toString());
+
+                            pbar.setVisibility(View.VISIBLE);
+
+                            if (cd.isConnectingToInternet()) {
+                                Intent i = new Intent(getActivity(), ActivityNewMeeting.class);
+                                // i.putExtra("HomePage","Partner");
+                                startActivity(i);
+                                getActivity().finish();
+
+
+                            }
+
+                            else {
+
+                                Toast.makeText(getActivity(), getResources().getString(R.string.internet_conn), Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+
+                    }
+
+                    /////////////////////////////////////////////////////////////////////////////////////
+
+
+                    else if(AppData.addextabuttonforpartner==true)
+
+                    {
+
+
+
+                        if (frag_count == 0) {
+
+
+                            if (cd.isConnectingToInternet()) {
+                                Intent i2 = new Intent(getActivity(), ActivityNewMeeting.class);
+                                // i.putExtra("HomePage","Partner");
+                                startActivity(i2);
+                                getActivity().finish();
+
+
+                            } else {
+
+                                Toast.makeText(getActivity(), getResources().getString(R.string.internet_conn), Toast.LENGTH_SHORT).show();
+                            }
+
+                        } else {
+
+                            int p =      0;
+                            //jsonArray = new JSONArray();
+
+                            for (int i = 0; i < AppData.selectedcontact.size(); i++) {
+
+                                if (AppData.selectedcontact.get(i).isSelect() == true) {
+
+                                    JSONObject jsonObject = new JSONObject();
+                                    try {
+                                        jsonObject.put("id", AppData.selectedcontact.get(i).getId());
+                                        jsonObject.put("name", AppData.selectedcontact.get(i).getName());
+                                        jsonObject.put("image", AppData.selectedcontact.get(i).getImage());
+                                        AppData.partnerjsonarray.put(p, jsonObject);
+
+                                        p++;
+
+
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
+
+                            Log.d("Data", "::::::" + AppData.partnerjsonarray.toString());
+
+                            pbar.setVisibility(View.VISIBLE);
+
+                            if (cd.isConnectingToInternet()) {
+                                Intent i = new Intent(getActivity(), ActivityNewMeeting.class);
+                                // i.putExtra("HomePage","Partner");
+                                startActivity(i);
+                                getActivity().finish();
+
+
+                            } else {
+
+                                Toast.makeText(getActivity(), getResources().getString(R.string.internet_conn), Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+
+                    }
+                    return true;
+                }
+                return false;
+            }
+        });
+
+
     }
 
-    public void getPartners() {
-
+    public void getPartners()
+    {
+        pbar.setVisibility(View.VISIBLE);
 
         String url = AppData.url+"/index.php/useraction/partnersget";
 
@@ -334,7 +519,8 @@ else {
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
-            public void onResponse(String s) {
+            public void onResponse(String s)
+            {
 
                 Log.d("url_getpartners_res","::::"+s.toString());
 
@@ -344,11 +530,17 @@ else {
                     if(jsonObject.getBoolean("status")==true)
                     {
 
-
-                        AppData.selectedcontact=new ArrayList<>();
+                        AppData.selectedcontact  =new ArrayList<PartnerSetGet>();
 
                         if(jsonObject.getJSONArray("details").length()>0)
+
+
                         {
+
+
+
+
+
                             for (int i = 0; i < jsonObject.getJSONArray("details").length(); i++)
                             {
 
@@ -359,41 +551,26 @@ else {
                                 String name=object.getString("name");
                                 String email=object.getString("email");
 
-                               // if(AppData.addextabuttonforpartner==false)
-                               // {
 
                                     PartnerSetGet contactSetGet = new PartnerSetGet(id, image, name, email, number, false);
                                     AppData.selectedcontact.add(contactSetGet);
 
-                               // }
-//                                else if(AppData.addextabuttonforpartner==true)
-//                                {
-//                                    if(AppData.selectedcontact.get(i).isSelect()==false)
-//                                    {
-//
-//
-//                                        PartnerSetGet contactSetGet = new PartnerSetGet(id, image, name, email, number, false);
-//                                        AppData.selectedcontact.add(contactSetGet);
-//
-//                                    }
-//                                    else
-//                                    {
-//                                        PartnerSetGet contactSetGet = new PartnerSetGet(id, image, name, email, number, true);
-//                                        AppData.selectedcontact.add(contactSetGet);
-//
-//
-//                                    }
-////
-////
-//                                }
+
 
 
 
 
                             }
-
-                            mAdapter = new RecyclerViewAdapter(getActivity(),AppData.selectedcontact,PartnerFrag.this);
-                            recyclerview.setAdapter(mAdapter);
+                           // if(AppData.addextabuttonforpartner==false)
+                            // {
+                                mAdapter = new RecyclerViewAdapter(getActivity(), AppData.selectedcontact, PartnerFrag.this);
+                                recyclerview.setAdapter(mAdapter);
+                            //}
+//                            else{
+//                                mAdapter = new RecyclerViewAdapter(getActivity(), AppData.selectedcontact2, PartnerFrag.this);
+//                                recyclerview.setAdapter(mAdapter);
+//
+//                            }
                         }
                         else{
                             no_data.setVisibility(View.VISIBLE);
@@ -401,7 +578,7 @@ else {
                         }
 
 
-                        Log.d("Size", String.valueOf(AppData.selectedcontact));
+
                         pbar.setVisibility(View.GONE);
 
                     }else{
@@ -420,6 +597,7 @@ else {
             public void onErrorResponse(VolleyError volleyError) {
 
                 pbar.setVisibility(View.GONE);
+                Log.d("ERROR::::::::::",volleyError.toString());
 
             }
         }){
@@ -444,4 +622,11 @@ else {
 
 
     }
+//    @Override
+//    public void onDetach() {
+//        super.onDetach();
+//     //   Toast.makeText(getActivity(),"On Detach is called",Toast.LENGTH_SHORT).show();
+//
+//
+//    }
 }

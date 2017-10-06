@@ -800,7 +800,7 @@ public class Signup extends Activity {
                         editor.putString("register_type","1");
                         editor.putString("HomePage","Signup");
                         editor.putString("first_time","true");
-                        editor.putString("app_password_status",app_password_status);
+                        editor.putString("app_password_status","false");
                         editor.putString("app_password",app_password);
 
 

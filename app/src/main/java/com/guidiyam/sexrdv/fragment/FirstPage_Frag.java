@@ -2,12 +2,15 @@ package com.guidiyam.sexrdv.fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.format.DateFormat;
 import android.util.Log;
@@ -19,6 +22,7 @@ import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,18 +34,28 @@ import android.widget.Toast;
 
 //import com.github.sundeepk.compactcalendarview.CompactCalendarView;
 import com.guidiyam.sexrdv.ActivityNewMeeting;
+import com.guidiyam.sexrdv.ActivitySetting;
 import com.guidiyam.sexrdv.Activitymeeting;
 import com.guidiyam.sexrdv.Adapter.Allmeeting_adapter;
 import com.guidiyam.sexrdv.Adapter.ShowAllListedMeetingAdapter;
 import com.guidiyam.sexrdv.R;
 import com.guidiyam.sexrdv.ResumeMeeting;
+import com.guidiyam.sexrdv.helper.ConnectionDetector;
+import com.guidiyam.sexrdv.setget.AllMeetingListSetGet;
+import com.guidiyam.sexrdv.setget.PartnerSetGet;
 import com.guidiyam.sexrdv.volley.AppData;
+import com.squareup.okhttp.Interceptor;
+import com.squareup.okhttp.MultipartBuilder;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.RequestBody;
 import com.stacktips.view.CalendarListener;
 import com.stacktips.view.CustomCalendarView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -51,7 +65,9 @@ import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
+import static android.content.Context.MODE_PRIVATE;
 
 
 //import com.imanoweb.calendarview.CustomCalendarView;
@@ -69,8 +85,12 @@ import java.util.Locale;
  */
 
 public class FirstPage_Frag extends Fragment {
+    ProgressBar pbar;
+    ArrayList<AllMeetingListSetGet> AllMeetingListArraylist;
    // CustomCalendarView calendarView;
+    TextView start_time,end_time,day_text,date_text,partner_text,partnerplace_txt;
     GridView calendarView;
+    String currentdate;
     String currentMonthName;
     Calendar currentCalendar;
     private static final String dateTemplate = "MMM yyyy";
@@ -89,6 +109,17 @@ public class FirstPage_Frag extends Fragment {
     private static final int MAX_CALENDAR_COLUMN = 42;
      int month, year;
      GridCellAdapter adapter;
+    SharedPreferences sharedPreferences;
+    LinearLayout currentmeetings;
+    String result,user_exitforggogle;
+    JSONObject jobj,userinfo;
+    boolean statusasyn;
+    int statuscode;
+    String message;
+    JSONArray currentdetails,details;
+    boolean status;
+    int totalcount;
+    ConnectionDetector cd;
     //CompactCalendarView calendarView;
 
    // MaterialCalendarView calendarView;
@@ -102,32 +133,50 @@ public class FirstPage_Frag extends Fragment {
         AppData.page="FirstPage_Frag";
         Log.d("Pageforsevice:",AppData.page);
        // AppData.isServiceCompleted=false;
+        pbar=(ProgressBar)view.findViewById(R.id.pbar);
+        /////////////////////////////////////////////////////////////////////
+        start_time=(TextView)view.findViewById(R.id.start_time);
+        end_time=(TextView)view.findViewById(R.id.end_time);
+        day_text=(TextView)view.findViewById(R.id.day_text);
+        date_text=(TextView)view.findViewById(R.id.date_text);
+        partner_text=(TextView)view.findViewById(R.id.partner_text);
+        partnerplace_txt=(TextView)view.findViewById(R.id.partnerplace_txt);
+        currentmeetings=(LinearLayout) view.findViewById(R.id.currentmeetings);
+        newmeeting=(ImageView)view.findViewById(R.id.newmeeting);
+        Resume_ll=(LinearLayout)view.findViewById(R.id.Resume_ll);
+        cd=new ConnectionDetector(getActivity());
+        //currentmeetings.setVisibility(View.GONE);
+        //////////////////////////////////////////////////////////////////
         showtotal_layout=(LinearLayout)view.findViewById(R.id.showtotal_layout);
         showtotal_layout.setVisibility(View.GONE);
         showalltxtview=(TextView)view.findViewById(R.id.showalltxtview);
-        showalltxtview.setText("Show all 10 meetings");
+
+
         recyclerview=(RecyclerView)view.findViewById(R.id.recyclerviewforlist);
+
+        recyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerview.setHasFixedSize(true);
+       // recyclerview.setItemAnimator(new DefaultItemAnimator());
+
         showalltxtview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 if(first_time==false) {
-                    showalltxtview.setText("Hide all 10 meetings");
+                    showalltxtview.setText("Hide all "+String.valueOf(totalcount)+" meetings");
 
                     first_time=true;
                     showtotal_layout.setVisibility(View.VISIBLE);
 
-
-                    recyclerview.setItemAnimator(new DefaultItemAnimator());
+                    Resume_ll.setVisibility(View.GONE);
+                    //recyclerview.setItemAnimator(new DefaultItemAnimator());
 
                     if (showAllListedMeetingAdapter == null) {
-//                allmeeting_adapter = new Allmeeting_adapter(getActivity());
-//                rv_notification.setAdapter(allmeeting_adapter);
 
-                        recyclerview.setHasFixedSize(true);
-                        recyclerview.setLayoutManager(new GridLayoutManager(getActivity(), 1));
+//                        recyclerview.setHasFixedSize(true);
+//                        recyclerview.setLayoutManager(new GridLayoutManager(getActivity(), 1));
                         // activityadapter = new ActivityAdpater(getActivity(), activitySetGetsLinkedList);
-                        showAllListedMeetingAdapter = new ShowAllListedMeetingAdapter(getActivity());
+                        showAllListedMeetingAdapter = new ShowAllListedMeetingAdapter(getActivity(),AllMeetingListArraylist);
                         recyclerview.setAdapter(showAllListedMeetingAdapter);//set an adapter
 
                     }
@@ -135,16 +184,16 @@ public class FirstPage_Frag extends Fragment {
                 }
                 else if(first_time==true)
                 {
-                    showalltxtview.setText("Show all 10 meetings");
+                    showalltxtview.setText("Show all "+String.valueOf(totalcount)+" meetings");
                     first_time=false;
                     showtotal_layout.setVisibility(View.GONE);
+                    Resume_ll.setVisibility(View.VISIBLE);
 
 
                 }
             }
         });
-        newmeeting=(ImageView)view.findViewById(R.id.newmeeting);
-        Resume_ll=(LinearLayout)view.findViewById(R.id.Resume_ll);
+
         Resume_ll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -155,9 +204,32 @@ public class FirstPage_Frag extends Fragment {
         newmeeting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                AppData.addextabuttonforpartner=false;
+                AppData.addextrabuttonforwhere=false;
+                AppData.addextrabuttonforreason=false;
+                AppData.addextrabuttonforwhat=false;
+                AppData.addextrabuttonforpositions=false;
+                AppData.addextrabuttonforgoods=false;
+                AppData.wheretxt="";
+                AppData.whattxt="";
+                AppData.reasontxt="";
+                AppData.positiontxt="";
+                AppData.goodstxt="";
+
+
+
+                AppData.selecttime="Time";
+                AppData.progress2=0;
+                AppData.duration2="1";
+                AppData.date="Select Date";
 
                 try {
                     AppData.partnerjsonarray=new JSONArray("[]");
+                    AppData.wherejsonarray=new JSONArray("[]");
+                    AppData.whatjsonarray=new JSONArray("[]");
+                    AppData.reasonjsonarray=new JSONArray("[]");
+                    AppData.positionsjsonarray=new JSONArray("[]");
+                    AppData.goodsjsonarray=new JSONArray("[]");
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -935,7 +1007,277 @@ public class FirstPage_Frag extends Fragment {
             return currentWeekDay;
         }
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        showalltxtview.setVisibility(View.INVISIBLE);
+        Resume_ll.setVisibility(View.GONE);
+        sharedPreferences = getActivity().getSharedPreferences("logindetails", MODE_PRIVATE);
+        Log.d("USERID",sharedPreferences.getString("user_id", " "));
+        Calendar c = Calendar.getInstance();
+        System.out.println("Current time => " + c.getTime());
+
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+         currentdate = df.format(c.getTime());
+        Log.d("CurrentDate",currentdate);
+
+        if(cd.isConnectingToInternet()) {
+            new ShowAllMeetings().execute();
+        }
+        else
+        {
+
+            Toast.makeText(getActivity(), getResources().getString(R.string.internet_conn), Toast.LENGTH_SHORT).show();
+        }
     }
+
+    public class ShowAllMeetings extends AsyncTask<Void,Void,Void>
+    {
+
+        private static final long CONNECT_TIMEOUT_MILLIS =90000 ;
+        private static final long READ_TIMEOUT_MILLIS =90000 ;
+
+        protected void onPreExecute() {
+
+            super.onPreExecute();
+            pbar.setVisibility(View.VISIBLE);
+
+        }
+        @Override
+        protected Void doInBackground(Void... params) {
+
+            try {
+
+                OkHttpClient client = new OkHttpClient();
+
+
+                client.setConnectTimeout(CONNECT_TIMEOUT_MILLIS, TimeUnit.MILLISECONDS);
+                client.setReadTimeout(READ_TIMEOUT_MILLIS, TimeUnit.MILLISECONDS);
+                client.interceptors().add(new Interceptor() {
+                    @Override
+                    public com.squareup.okhttp.Response intercept(Chain chain) throws IOException {
+                        com.squareup.okhttp.Request request = chain.request();
+
+                        // try the request
+                        com.squareup.okhttp.Response response = chain.proceed(request);
+
+                        int tryCount = 0;
+                        while (!response.isSuccessful() && tryCount < 3) {
+
+                            Log.d("intercept", "Request is not successful - " + tryCount);
+
+                            tryCount++;
+
+                            // retry the request
+                            response = chain.proceed(request);
+                        }
+
+                        // otherwise just pass the original response on
+                        return response;
+                    }
+                });
+
+                MultipartBuilder mBilder = new MultipartBuilder();
+
+                mBilder.type(MultipartBuilder.FORM);
+
+                String url= AppData.url+"/index.php/useraction/getmeeting";
+
+
+                Log.d("URL",url);
+                mBilder.addFormDataPart("date",currentdate);
+                mBilder.addFormDataPart("page","");
+                mBilder.addFormDataPart("limit","");
+                mBilder.addFormDataPart("user_id",sharedPreferences.getString("user_id", " "));
+                mBilder.addFormDataPart("mode",sharedPreferences.getString("mode", " "));
+
+                RequestBody requestBody = mBilder.build();
+
+                com.squareup.okhttp.Request request = new com.squareup.okhttp.Request.Builder()
+
+                        .url(url)
+
+                        .post(requestBody)
+
+                        .build();
+
+                com.squareup.okhttp.Response response = client.newCall(request).execute();
+
+
+
+                result = response.body().string();
+
+                Log.d("Result",result);
+
+//
+                jobj = new JSONObject(result);
+                status=jobj.getBoolean("status");
+                totalcount  =jobj.getInt("totalcount");
+                currentdetails =jobj.getJSONArray("currentdetails");
+                details =jobj.getJSONArray("details");
+//                message=jobj.getString("message");
+
+
+
+            }
+            catch (Exception e) {
+                Log.d("OKHTTP_RESULT", "ERROR : " + e.toString());
+
+            }
+            return null;
+        }
+
+        protected void onPostExecute(Void resultt)
+        {
+            super.onPostExecute(resultt);
+            pbar.setVisibility(View.GONE);
+            if(status==true)
+            {
+                showalltxtview.setVisibility(View.VISIBLE);
+                showalltxtview.setText("Show all "+String.valueOf(totalcount)+" meetings");
+                Resume_ll.setVisibility(View.VISIBLE);
+
+
+
+                try {
+
+
+                    JSONObject jsonObject = currentdetails.getJSONObject(0);
+                    String start_time2=jsonObject.getString("start_time");
+                    String end_time2=jsonObject.getString("end_time");
+                    String day2=   jsonObject.getString("day")  ;
+                    String  date2= jsonObject.getString( "date");
+                    start_time.setText(start_time2);
+                    end_time.setText("- "+end_time2);
+                    day_text.setText(day2);
+                    date_text.setText(date2);
+                    JSONArray partners=jsonObject.getJSONArray("partners");
+                    if(partners.length()>0)
+                    {
+                        partner_text.setText(partners.get(0).toString());
+
+                    }
+                    JSONArray where=jsonObject.getJSONArray("where");
+                    if(where.length()==1)
+                    {
+                        partnerplace_txt.setText(where.get(0).toString());
+
+                    }
+                    else
+                    {
+                        partnerplace_txt.setText(where.get(0).toString()+" ,"+where.get(1).toString());
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                if(details.length()>0)
+                {
+
+                    AllMeetingListArraylist =new ArrayList<AllMeetingListSetGet>();
+                    for(int j=0;j<details.length();j++)
+                    {
+                        try {
+                            JSONObject jsonObject2 = details.getJSONObject(j);
+                            String start_time=jsonObject2.getString("start_time");
+                            String end_time=jsonObject2.getString("end_time");
+                            String day=jsonObject2.getString("day");
+                            String date=jsonObject2.getString("date");
+                            JSONArray where=jsonObject2.getJSONArray("where");
+                            JSONArray partners=jsonObject2.getJSONArray("partners");
+
+                          AllMeetingListSetGet allMeetingListSetGet = new AllMeetingListSetGet(start_time, end_time, day, date, where, partners);
+                            AllMeetingListArraylist.add(allMeetingListSetGet);
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+
+                    }
+                    showAllListedMeetingAdapter = new ShowAllListedMeetingAdapter(getActivity(),AllMeetingListArraylist);
+                    recyclerview.setAdapter(showAllListedMeetingAdapter);//set an adapter
+
+
+                }
+
+
+
+
+
+
+//                if(currentdetails.length()>0)
+//                {
+//                    for (int i = 0; i < currentdetails.length(); i++)
+//                    {
+//
+//
+//                        try {
+//                            JSONObject jsonObject = currentdetails.getJSONObject(i);
+//                            String start_time2=jsonObject.getString("start_time");
+//                              String end_time2=jsonObject.getString("end_time");
+//                               String day2=   jsonObject.getString("day")  ;
+//                                String  date2= jsonObject.getString( "date");
+//                                start_time.setText(start_time2);
+//                            end_time.setText("- "+end_time2);
+//                            day_text.setText(day2);
+//                            date_text.setText(date2);
+//                            JSONArray partners=jsonObject.getJSONArray("partners");
+//                            if(partners.length()>0)
+//                            {
+//                                partner_text.setText(partners.get(0).toString());
+//
+//                            }
+//                            JSONArray where=jsonObject.getJSONArray("where");
+//                            if(where.length()==1)
+//                            {
+//                                partnerplace_txt.setText(where.get(0).toString());
+//
+//                            }
+//                            else
+//                            {
+//                                partnerplace_txt.setText(where.get(0).toString()+" ,"+where.get(1).toString());
+//
+//                            }
+//
+//
+//
+//
+//
+//                        } catch (JSONException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }
+
+
+            }
+
+            else  if(status==false)
+            {
+
+                showalltxtview.setVisibility(View.INVISIBLE);
+                Resume_ll.setVisibility(View.GONE);
+
+            }
+
+
+
+////            else if(status1==false)
+//            Toast.makeText(ActivitySetting.this, message, Toast.LENGTH_SHORT).show();
+//            SharedPreferences.Editor editor = getSharedPreferences("logindetails", MODE_PRIVATE).edit();
+//            //editor.putString("app_password_status",app_password_status);
+//            editor.putString("app_password", AppData.app_password);
+//
+//            editor.commit();
+        }
+    }
+
+
+}
 
 
 //    @Override

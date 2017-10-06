@@ -72,7 +72,7 @@ public class MainActivity extends Activity {
                 if(saveLogin.equals("A"))
                 {
 
-if(sharedPreferences.getString("app_password_status", " ").equals("0"))
+if(sharedPreferences.getString("app_password_status", " ").equals("false"))
 {
     Intent i = new Intent(MainActivity.this, HomePage.class);
     startActivity(i);

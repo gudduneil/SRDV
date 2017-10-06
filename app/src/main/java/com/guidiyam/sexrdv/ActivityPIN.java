@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.andrognito.pinlockview.IndicatorDots;
@@ -30,6 +31,7 @@ public class ActivityPIN extends AppCompatActivity {
     String passcode;
     LinearLayout Button_Reset;
     SharedPreferences sharedPreferences;
+    TextView errortxt1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,8 @@ public class ActivityPIN extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("logindetails", MODE_PRIVATE);
       //  Button_Reset = (LinearLayout)findViewById(R.id.ll_reset);
+        errortxt1=(TextView)findViewById(R.id.errortxt1) ;
+        errortxt1.setVisibility(View.INVISIBLE);
         mPinLockView = (PinLockView) findViewById(R.id.pin_lock_view);
         mIndicatorDots = (IndicatorDots) findViewById(R.id.indicator_dots);
         /////////////////////////////////////////////////////////////////////////////////////////////
@@ -77,10 +81,11 @@ if(passcode.equals(sharedPreferences.getString("app_password", "")))
 //                    placeOrder();
 
                     else{
-
-                    Toast.makeText(ActivityPIN.this, "incorrect pin", Toast.LENGTH_SHORT).show();
-//            mIndicatorDots.updateDot(0);
-//            mPinLockView.mPin = "";
+                     errortxt1.setVisibility(View.VISIBLE);
+    //mIndicatorDots.doEm(R.drawable.round_white);
+                    //Toast.makeText(ActivityPIN.this, getResources().getString(R.string.incorrectpin), Toast.LENGTH_SHORT).show();
+           // mIndicatorDots.setP;
+    //mIndicatorDots.setdotEmptyBackground()
 
                 }
 
@@ -96,7 +101,9 @@ if(passcode.equals(sharedPreferences.getString("app_password", "")))
         }
 
         @Override
-        public void onPinChange(int pinLength, String intermediatePin) {
+        public void onPinChange(int pinLength, String intermediatePin)
+        {
+            errortxt1.setVisibility(View.INVISIBLE);
            // mPinLockView.setBackgroundResource(R.drawable.white_astrics);
             //mIndicatorDots.setB
         }

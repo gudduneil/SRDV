@@ -11,6 +11,7 @@ public class PartnerSetGet {
     String name;
     boolean select;
     String email;
+    String number;
 
     public PartnerSetGet(String id, String image, String name, String email, String number, boolean select) {
         this.id = id;
@@ -38,7 +39,7 @@ public class PartnerSetGet {
         this.number = number;
     }
 
-    String number;
+
 
     public String getId() {
         return id;

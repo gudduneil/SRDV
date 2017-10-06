@@ -57,6 +57,9 @@ import com.guidiyam.sexrdv.service.ContactService;
 import com.guidiyam.sexrdv.volley.AppData;
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
 
 //import com.imanoweb.calendarview.CustomCalendarView;
 
@@ -73,7 +76,7 @@ public class HomePage extends FragmentActivity
     RelativeLayout ll_square,ll_fire,ll_people,ll_chip;
     //CustomCalendarView calendarView;
     ConnectionDetector cd;
-    SharedPreferences.Editor editor2,editor23;
+    SharedPreferences.Editor editor2,editor23,contacteditor;
     TextView editprofile;
     FragmentManager fragmentManager,fragmentManager2,fragmentManager3;
     FragmentTransaction fragmentTransaction,fragmentTransaction2,fragmentTransaction3;
@@ -94,6 +97,7 @@ public class HomePage extends FragmentActivity
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         setContentView(R.layout.activity_home_page);
         save=(TextView)findViewById(R.id.save);
+        Log.d("firsttimeservicerunning",AppData.firsttimeservicerunning);
 
 
 
@@ -184,7 +188,46 @@ public class HomePage extends FragmentActivity
 
         ll_square.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
+
+
+               // AppData.selectp=false;
+                AppData.firsttimeservicerunning="true";
+                ///////////////////////////////////////////////////////
+
+                AppData.addextabuttonforpartner=false;
+                AppData.addextrabuttonforwhere=false;
+                AppData.addextrabuttonforreason=false;
+                AppData.addextrabuttonforwhat=false;
+                AppData.addextrabuttonforpositions=false;
+                AppData.addextrabuttonforgoods=false;
+                AppData.wheretxt="";
+                AppData.whattxt="";
+                AppData.reasontxt="";
+                AppData.positiontxt="";
+                AppData.goodstxt="";
+
+
+
+
+                AppData.selecttime="Time";
+                AppData.progress2=0;
+                AppData.duration2="1";
+                AppData.date="Select Date";
+
+                try {
+                    AppData.partnerjsonarray=new JSONArray("[]");
+                    AppData.wherejsonarray=new JSONArray("[]");
+                    AppData.whatjsonarray=new JSONArray("[]");
+                    AppData.reasonjsonarray=new JSONArray("[]");
+                    AppData.positionsjsonarray=new JSONArray("[]");
+                    AppData.goodsjsonarray=new JSONArray("[]");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                ///////////////////////////////////
 
 
                 img_square.setImageResource(R.drawable.squareselect);
@@ -240,20 +283,58 @@ public class HomePage extends FragmentActivity
                 fragmentTransaction.replace(R.id.blank, task_fragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+                AppData.addextabuttonforpartner=false;
 
 
 
 
-                Intent intent = new Intent(HomePage.this,
-                        ContactService.class);
-                intent.setAction(ContactService.ACTION_ON);
-                startService(intent);
+//                Intent intent = new Intent(HomePage.this,
+//                        ContactService.class);
+//                intent.setAction(ContactService.ACTION_ON);
+//                startService(intent);
 
             }
         });
         ll_fire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //////////////////////////////////////////////////////
+               // AppData.duration2="1";
+
+                //AppData.selectp=false;
+                AppData.firsttimeservicerunning="true";
+                ///////////////////////////////////////////////////////
+                AppData.addextabuttonforpartner=false;
+                AppData.addextrabuttonforwhere=false;
+                AppData.addextrabuttonforreason=false;
+                AppData.addextrabuttonforwhat=false;
+                AppData.addextrabuttonforpositions=false;
+                AppData.addextrabuttonforgoods=false;
+                AppData.wheretxt="";
+                AppData.whattxt="";
+                AppData.reasontxt="";
+                AppData.positiontxt="";
+                AppData.goodstxt="";
+
+
+
+                AppData.selecttime="Time";
+                AppData.progress2=0;
+                AppData.duration2="1";
+                AppData.date="Select Date";
+
+                try {
+                    AppData.partnerjsonarray=new JSONArray("[]");
+                    AppData.wherejsonarray=new JSONArray("[]");
+                    AppData.whatjsonarray=new JSONArray("[]");
+                    AppData.reasonjsonarray=new JSONArray("[]");
+                    AppData.positionsjsonarray=new JSONArray("[]");
+                    AppData.goodsjsonarray=new JSONArray("[]");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                ///////////////////////////////////////////////////////
                 img_square.setImageResource(R.drawable.squaredeselect);
                 img_fire.setImageResource(R.drawable.fireselect);
                 img_people.setImageResource(R.drawable.peopledeselect);
@@ -301,7 +382,7 @@ public class HomePage extends FragmentActivity
                 //topbar.setVisibility(View.GONE);
 
                 editprofile.setText("My meetings");
-
+                AppData.addextabuttonforpartner=false;
                 save.setVisibility(View.INVISIBLE);
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
@@ -316,6 +397,43 @@ public class HomePage extends FragmentActivity
         ll_people.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ///////////////////////////////////////
+               // AppData.duration2="1";
+
+               // AppData.selectp=false;
+                AppData.firsttimeservicerunning="true";
+                ///////////////////////////////////////////////////////
+
+                AppData.addextabuttonforpartner=false;
+                AppData.addextrabuttonforwhere=false;
+                AppData.addextrabuttonforreason=false;
+                AppData.addextrabuttonforwhat=false;
+                AppData.addextrabuttonforpositions=false;
+                AppData.addextrabuttonforgoods=false;
+                AppData.wheretxt="";
+                AppData.whattxt="";
+                AppData.reasontxt="";
+                AppData.positiontxt="";
+                AppData.goodstxt="";
+
+
+
+                AppData.selecttime="Time";
+                AppData.progress2=0;
+                AppData.duration2="1";
+                AppData.date="Select Date";
+
+                try {
+                    AppData.partnerjsonarray=new JSONArray("[]");
+                    AppData.wherejsonarray=new JSONArray("[]");
+                    AppData.whatjsonarray=new JSONArray("[]");
+                    AppData.reasonjsonarray=new JSONArray("[]");
+                    AppData.positionsjsonarray=new JSONArray("[]");
+                    AppData.goodsjsonarray=new JSONArray("[]");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                /////////////////////////////////////////
 
 
                 img_square.setImageResource(R.drawable.squaredeselect);
@@ -361,10 +479,10 @@ public class HomePage extends FragmentActivity
 
                 image_extension.setBackgroundResource(R.drawable.rewarddeselect);
                 extension.setTextColor(Color.parseColor("#767998"));
-
+                AppData.addextabuttonforpartner=false;
                 AppData.page="PartnerFrag";
                 editprofile.setText("Partners");
-                save.setVisibility(View.VISIBLE);
+                save.setVisibility(View.INVISIBLE);
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 PartnerFrag task_fragment = new PartnerFrag();
@@ -389,6 +507,43 @@ public class HomePage extends FragmentActivity
         ll_chip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ////////////////////////////////////////////////
+             //   AppData.duration2="1";
+
+                //AppData.selectp=false;
+                AppData.firsttimeservicerunning="true";
+                ///////////////////////////////////////////////////////
+
+                AppData.addextabuttonforpartner=false;
+                AppData.addextrabuttonforwhere=false;
+                AppData.addextrabuttonforreason=false;
+                AppData.addextrabuttonforwhat=false;
+                AppData.addextrabuttonforpositions=false;
+                AppData.addextrabuttonforgoods=false;
+                AppData.wheretxt="";
+                AppData.whattxt="";
+                AppData.reasontxt="";
+                AppData.positiontxt="";
+                AppData.goodstxt="";
+
+
+
+                AppData.selecttime="Time";
+                AppData.progress2=0;
+                AppData.duration2="1";
+                AppData.date="Select Date";
+
+                try {
+                    AppData.partnerjsonarray=new JSONArray("[]");
+                    AppData.wherejsonarray=new JSONArray("[]");
+                    AppData.whatjsonarray=new JSONArray("[]");
+                    AppData.reasonjsonarray=new JSONArray("[]");
+                    AppData.positionsjsonarray=new JSONArray("[]");
+                    AppData.goodsjsonarray=new JSONArray("[]");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                ///////////////////////////////////////////////////////
 
                 img_square.setImageResource(R.drawable.squaredeselect);
                 img_fire.setImageResource(R.drawable.firedeselect);
@@ -431,7 +586,7 @@ public class HomePage extends FragmentActivity
                 image_extension.setBackgroundResource(R.drawable.rewarddeselect);
                 extension.setTextColor(Color.parseColor("#767998"));
 
-
+                AppData.addextabuttonforpartner=false;
                 AppData.page="Reward_Frag";
                 editprofile.setText("Rewards & Punishments");
                 save.setVisibility(View.INVISIBLE);
@@ -512,6 +667,7 @@ public class HomePage extends FragmentActivity
 
                 image_extension.setBackgroundResource(R.drawable.rewarddeselect);
                 extension.setTextColor(Color.parseColor("#767998"));
+                AppData.addextabuttonforpartner=false;
 
                 AppData.page="FirstPage_Frag";
                 editprofile.setText("My calender");
@@ -535,12 +691,49 @@ public class HomePage extends FragmentActivity
                 highlighted4.setVisibility(View.INVISIBLE);
 
 
-                Intent intent = new Intent(HomePage.this,
-                        ContactService.class);
-                intent.setAction(ContactService.ACTION_ON);
-                startService(intent);
+
+                //AppData.selectp=false;
+                AppData.firsttimeservicerunning="true";
+                ///////////////////////////////////////////////////////
+
+                AppData.addextabuttonforpartner=false;
+                AppData.addextrabuttonforwhere=false;
+                AppData.addextrabuttonforreason=false;
+                AppData.addextrabuttonforwhat=false;
+                AppData.addextrabuttonforpositions=false;
+                AppData.addextrabuttonforgoods=false;
+                AppData.wheretxt="";
+                AppData.whattxt="";
+                AppData.reasontxt="";
+                AppData.positiontxt="";
+                AppData.goodstxt="";
 
 
+
+                AppData.selecttime="Time";
+                AppData.progress2=0;
+                AppData.duration2="1";
+                AppData.date="Select Date";
+
+                try {
+                    AppData.partnerjsonarray=new JSONArray("[]");
+                    AppData.wherejsonarray=new JSONArray("[]");
+                    AppData.whatjsonarray=new JSONArray("[]");
+                    AppData.reasonjsonarray=new JSONArray("[]");
+                    AppData.positionsjsonarray=new JSONArray("[]");
+                    AppData.goodsjsonarray=new JSONArray("[]");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+                if(AppData.firsttimeservicerunning.equals("false")) {
+                    Intent intent = new Intent(HomePage.this,
+                            ContactService.class);
+                    intent.setAction(ContactService.ACTION_ON);
+                    startService(intent);
+
+                }
 
             }
         });
@@ -586,6 +779,7 @@ public class HomePage extends FragmentActivity
                 AppData.page="NewMeetingFrag";
                 //topbar.setVisibility(View.GONE);
                 editprofile.setText("My meetings");
+                AppData.addextabuttonforpartner=false;
 
 
                 fragmentManager = getSupportFragmentManager();
@@ -605,6 +799,42 @@ public class HomePage extends FragmentActivity
                 highlighted4.setVisibility(View.INVISIBLE);
 
 
+
+              //  AppData.selectp=false;
+                AppData.firsttimeservicerunning="true";
+                ///////////////////////////////////////////////////////
+
+                AppData.addextabuttonforpartner=false;
+                AppData.addextrabuttonforwhere=false;
+                AppData.addextrabuttonforreason=false;
+                AppData.addextrabuttonforwhat=false;
+                AppData.addextrabuttonforpositions=false;
+                AppData.addextrabuttonforgoods=false;
+                AppData.wheretxt="";
+                AppData.whattxt="";
+                AppData.reasontxt="";
+                AppData.positiontxt="";
+                AppData.goodstxt="";
+
+
+
+                AppData.selecttime="Time";
+                AppData.progress2=0;
+                AppData.duration2="1";
+                AppData.date="Select Date";
+
+                try {
+                    AppData.partnerjsonarray=new JSONArray("[]");
+                    AppData.wherejsonarray=new JSONArray("[]");
+                    AppData.whatjsonarray=new JSONArray("[]");
+                    AppData.reasonjsonarray=new JSONArray("[]");
+                    AppData.positionsjsonarray=new JSONArray("[]");
+                    AppData.goodsjsonarray=new JSONArray("[]");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
 //                Intent i=new Intent(HomePage.this,NewActivityMeeting.class);
 //                startActivity(i);
 
@@ -617,6 +847,41 @@ public class HomePage extends FragmentActivity
         partner_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+              //  AppData.selectp=false;
+                AppData.firsttimeservicerunning="true";
+                ///////////////////////////////////////////////////////
+
+
+                AppData.addextabuttonforpartner=false;
+                AppData.addextrabuttonforwhere=false;
+                AppData.addextrabuttonforreason=false;
+                AppData.addextrabuttonforwhat=false;
+                AppData.addextrabuttonforpositions=false;
+                AppData.addextrabuttonforgoods=false;
+                AppData.wheretxt="";
+                AppData.whattxt="";
+                AppData.reasontxt="";
+                AppData.positiontxt="";
+                AppData.goodstxt="";
+
+
+
+
+                AppData.selecttime="Time";
+                AppData.progress2=0;
+                AppData.duration2="1";
+                AppData.date="Select Date";
+
+                try {
+                    AppData.partnerjsonarray=new JSONArray("[]");
+                    AppData.wherejsonarray=new JSONArray("[]");
+                    AppData.whatjsonarray=new JSONArray("[]");
+                    AppData.reasonjsonarray=new JSONArray("[]");
+                    AppData.positionsjsonarray=new JSONArray("[]");
+                    AppData.goodsjsonarray=new JSONArray("[]");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                // AppData.selectedContact=AppData.contactList;
                 drawer_layout.closeDrawer(paneldrawer);
 
@@ -653,8 +918,9 @@ public class HomePage extends FragmentActivity
                 extension.setTextColor(Color.parseColor("#767998"));
 //                Intent i =new Intent(HomePage.this,ActivityPartner.class);
 //                startActivity(i);
-                save.setVisibility(View.VISIBLE);
+                save.setVisibility(View.INVISIBLE);
                 AppData.page="PartnerFrag";
+                AppData.addextabuttonforpartner=false;
 
                 editprofile.setText("Partners");
                 fragmentManager = getSupportFragmentManager();
@@ -683,6 +949,43 @@ public class HomePage extends FragmentActivity
         reward_layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+             //   AppData.selectp=false;
+
+                AppData.firsttimeservicerunning="true";
+                ///////////////////////////////////////////////////////
+
+
+                AppData.addextabuttonforpartner=false;
+                AppData.addextrabuttonforwhere=false;
+                AppData.addextrabuttonforreason=false;
+                AppData.addextrabuttonforwhat=false;
+                AppData.addextrabuttonforpositions=false;
+                AppData.addextrabuttonforgoods=false;
+                AppData.wheretxt="";
+                AppData.whattxt="";
+                AppData.reasontxt="";
+                AppData.positiontxt="";
+                AppData.goodstxt="";
+
+
+
+
+                AppData.selecttime="Time";
+                AppData.progress2=0;
+                AppData.duration2="1";
+                AppData.date="Select Date";
+
+                try {
+                    AppData.partnerjsonarray=new JSONArray("[]");
+                    AppData.wherejsonarray=new JSONArray("[]");
+                    AppData.whatjsonarray=new JSONArray("[]");
+                    AppData.reasonjsonarray=new JSONArray("[]");
+                    AppData.positionsjsonarray=new JSONArray("[]");
+                    AppData.goodsjsonarray=new JSONArray("[]");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
                 drawer_layout.closeDrawer(paneldrawer);
 
@@ -733,7 +1036,7 @@ public class HomePage extends FragmentActivity
                 save.setVisibility(View.INVISIBLE);
                 editprofile.setText("Rewards & Punishments");
 
-
+                AppData.addextabuttonforpartner=false;
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 Reward_Frag task_fragment = new Reward_Frag();
@@ -789,7 +1092,7 @@ public class HomePage extends FragmentActivity
                 image_extension.setBackgroundResource(R.drawable.rewarddeselect);
                 extension.setTextColor(Color.parseColor("#767998"));
                 save.setVisibility(View.INVISIBLE);
-
+                AppData.addextabuttonforpartner=false;
 //                editprofile.setText("My calender");
 //                fragmentManager = getSupportFragmentManager();
                 Intent i =new Intent(HomePage.this,ActivityStat.class);
@@ -831,7 +1134,7 @@ public class HomePage extends FragmentActivity
 
                 //imge_logout.setBackgroundResource(R.drawable.rewarddeselect);
                 logout.setTextColor(Color.parseColor("#767998"));
-
+                AppData.addextabuttonforpartner=false;
 
                 image_extension.setBackgroundResource(R.drawable.rewarddeselect);
                 extension.setTextColor(Color.parseColor("#767998"));
@@ -871,6 +1174,7 @@ public class HomePage extends FragmentActivity
 
              //   imge_logout.setBackgroundResource(R.drawable.rewarddeselect);
                 logout.setTextColor(Color.parseColor("#767998"));
+                AppData.addextabuttonforpartner=false;
 
                 image_extension.setBackgroundResource(R.drawable.rewarddeselect);
                 extension.setTextColor(Color.parseColor("#767998"));
@@ -922,6 +1226,7 @@ public class HomePage extends FragmentActivity
                 image_extension.setBackgroundResource(R.drawable.rewarddeselect);
                 extension.setTextColor(Color.parseColor("#767998"));
                 save.setVisibility(View.INVISIBLE);
+                AppData.addextabuttonforpartner=false;
 
                 editprofile.setText("My calender");
                 fragmentManager = getSupportFragmentManager();
@@ -972,7 +1277,7 @@ public class HomePage extends FragmentActivity
                 extension.setTextColor(Color.parseColor("#767998"));
 
                 save.setVisibility(View.INVISIBLE);
-
+                AppData.addextabuttonforpartner=false;
                 editprofile.setText("My calender");
                 fragmentManager = getSupportFragmentManager();
                 fragmentTransaction = fragmentManager.beginTransaction();
@@ -1029,6 +1334,11 @@ public class HomePage extends FragmentActivity
                                 {
                                     // ...
                                     FirebaseAuth.getInstance().signOut();
+                                    AppData.firsttimeservicerunning="false";
+
+                                    contacteditor=getSharedPreferences("shareprefcontactlist", MODE_PRIVATE).edit();
+                                    contacteditor.clear();
+                                    contacteditor.commit();
 
                                     editor23 = getSharedPreferences("logindetails", MODE_PRIVATE).edit();
                                     editor23.clear();
@@ -1047,7 +1357,10 @@ public class HomePage extends FragmentActivity
 
                 }
                 else{
-
+                    AppData.firsttimeservicerunning="false";
+                    contacteditor=getSharedPreferences("shareprefcontactlist", MODE_PRIVATE).edit();
+                    contacteditor.clear();
+                    contacteditor.commit();
 
                     editor23 = getSharedPreferences("logindetails", MODE_PRIVATE).edit();
                     editor23.clear();
@@ -1064,7 +1377,7 @@ public class HomePage extends FragmentActivity
                 }
 
 
-
+killService();
 
 
                 //exitByBackKey();
@@ -1418,7 +1731,7 @@ finish();
                     image_extension.setBackgroundResource(R.drawable.rewarddeselect);
                     extension.setTextColor(Color.parseColor("#767998"));
 
-
+                    AppData.addextabuttonforpartner=false;
                     AppData.page="FirstPage_Frag";
                     save.setVisibility(View.INVISIBLE);
 
@@ -1481,6 +1794,7 @@ finish();
                     extension.setTextColor(Color.parseColor("#767998"));
 
                     AppData.page="FirstPage_Frag";
+                    AppData.addextabuttonforpartner=false;
                     save.setVisibility(View.INVISIBLE);
 
                     editprofile.setText("My calender");
@@ -1504,7 +1818,7 @@ finish();
 
             if(AppData.partnerclick==true)
             {
-                //Toast.makeText(HomePage.this,"Go to try block",Toast.LENGTH_SHORT).show();
+               // Toast.makeText(HomePage.this,"Go to partnerclicktrue block",Toast.LENGTH_SHORT).show();
                 if (getIntent().getExtras().getString("HomePage").equals("Partner")) {
                     AppData.partnerclick=false;
                     Log.d("PAGE:::::", getIntent().getExtras().getString("HomePage"));
@@ -1552,7 +1866,8 @@ finish();
                     extension.setTextColor(Color.parseColor("#767998"));
 
                     AppData.page="PartnerFrag";
-                    save.setVisibility(View.VISIBLE);
+                    save.setVisibility(View.INVISIBLE);
+                    //AppData.addextabuttonforpartner=false;
 
                     editprofile.setText("Partners");
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -1615,11 +1930,15 @@ readcontactspermission();
 
 if(AppData.page.equals("FirstPage_Frag")  )
 {
-   // Toast.makeText(HomePage.this,"go to service block",Toast.LENGTH_SHORT).show();
-    Intent intent = new Intent(HomePage.this,
-            ContactService.class);
-    intent.setAction(ContactService.ACTION_ON);
-    startService(intent);
+    if(AppData.firsttimeservicerunning.equals("false"))
+    {
+        //AppData.firsttimeservicerunning="true";
+        // Toast.makeText(HomePage.this,"go to service block",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(HomePage.this,
+                ContactService.class);
+        intent.setAction(ContactService.ACTION_ON);
+        startService(intent);
+    }
 }
 else {
 
@@ -1640,18 +1959,19 @@ else {
         //Toast.makeText(HomePage.this,"on Destroy is called",Toast.LENGTH_SHORT).show();
 //        AppData.isServiceCompleted=false;
 //        AppData. allcontactsfetch=false;
-//        killService();
-    }
-    public  void killService()
-    {
-
-        Intent intent = new Intent(HomePage.this,
-                ContactService.class);
-        intent.setAction(ContactService.ACTION_KILL);
-        //stopService(intent);
-        startService(intent);
+killService();
     }
 
+public void killService()
+{
+    Intent intent = new Intent(HomePage.this,
+            ContactService.class);
+    intent.setAction(ContactService.ACTION_KILL);
+    startService(intent);
+
+
+
+}
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults)
@@ -1671,10 +1991,14 @@ else {
 
                     if(AppData.page.equals("FirstPage_Frag") || AppData.page.equals("page") )
                     {
-                        Intent intent = new Intent(HomePage.this,
-                                ContactService.class);
-                        intent.setAction(ContactService.ACTION_ON);
-                        startService(intent);
+                        if(AppData.firsttimeservicerunning.equals("false"))
+                        {
+                            //AppData.firsttimeservicerunning="true";
+                            Intent intent = new Intent(HomePage.this,
+                                    ContactService.class);
+                            intent.setAction(ContactService.ACTION_ON);
+                            startService(intent);
+                        }
                     }
                     else {
 

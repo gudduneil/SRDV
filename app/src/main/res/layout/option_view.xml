@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:gravity="center_horizontal"
@@ -8,6 +8,8 @@
     >
 
     <RelativeLayout
+
+        android:id="@+id/mainlayout"
         android:layout_width="60dp"
         android:layout_height="60dp">
 
@@ -15,7 +17,7 @@
         android:id="@+id/image"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/lock_icon"
+
         />
 
         <ImageView
@@ -35,16 +37,21 @@
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="30dp"
         android:layout_marginTop="5dp"
-        android:layout_height="25dp"
-        android:text="Vagina"
+
+        android:text=""
         android:gravity="center_horizontal"
-        android:textSize="13sp"
-        android:textColor="#FFF"
-        android:singleLine="true"
+        android:textSize="11sp"
+        android:textColor="#FFFFFF"
+
+        android:maxLines="2"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:scrollHorizontally="false"
         />
 
 

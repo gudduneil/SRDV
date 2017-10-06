@@ -31,4 +31,5 @@
     <string name="succesfull_msg">Enjoy your free account\nand start having fun now!</string>
     <string name="ph_number">Your phone number</string>
     <string name="enter_ph_number">Enter your phone number</string>
+    <string name="incorrectpin">incorrect pin</string>
 </resources>

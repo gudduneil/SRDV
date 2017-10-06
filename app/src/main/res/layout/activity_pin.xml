@@ -71,7 +71,17 @@
                   app:dotSpacing="5dp"
                android:layout_below="@+id/tv_header"/>
 
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/errortxt1"
+                android:layout_marginTop="10dp"
+                android:text="@string/incorrectpin"
+                android:layout_gravity="center_horizontal"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
             <com.andrognito.pinlockview.PinLockView
+
                 android:id="@+id/pin_lock_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

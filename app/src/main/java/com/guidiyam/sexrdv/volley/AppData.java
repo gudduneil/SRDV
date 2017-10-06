@@ -12,8 +12,19 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.guidiyam.sexrdv.setget.ContactList_getset;
 import com.guidiyam.sexrdv.setget.ContactList_getset2;
+import com.guidiyam.sexrdv.setget.GoodsListingsSetGet;
+import com.guidiyam.sexrdv.setget.GoodsSetGet;
+import com.guidiyam.sexrdv.setget.NewContactList_getset;
 import com.guidiyam.sexrdv.setget.PartnerListing;
 import com.guidiyam.sexrdv.setget.PartnerSetGet;
+import com.guidiyam.sexrdv.setget.PositionsListingsSetGet;
+import com.guidiyam.sexrdv.setget.PositionsSetGet;
+import com.guidiyam.sexrdv.setget.ReasonListingsSetGet;
+import com.guidiyam.sexrdv.setget.ReasonSetGet;
+import com.guidiyam.sexrdv.setget.WhatListingsSetGet;
+import com.guidiyam.sexrdv.setget.WhatSetGet;
+import com.guidiyam.sexrdv.setget.WhereListingsSetGet;
+import com.guidiyam.sexrdv.setget.WhereSetGet;
 
 import org.json.JSONArray;
 
@@ -39,15 +50,68 @@ public class AppData extends MultiDexApplication
     public static  String image;
     public static  boolean isServiceCompleted=false;
     public static  boolean allcontactsfetch=false;
+    public  static  String wheretxt="";
+    public static  String whattxt="";
+    public static String reasontxt="";
+    public static String positiontxt="";
+    public static String goodstxt="";
+     public static  String duration2="1";
+    public static  int progress2=0;
+
+    public static String selecttime="Time";
+    public static   String selectdate="Select Date";
+    public static String date="Select Date";
+    public  static ArrayList<WhereSetGet> wherelistings=null;
+    public  static ArrayList<WhatSetGet> whatlistings=null;
+    public static ArrayList<ReasonSetGet> reasonlistings=null;
+    public static ArrayList<PositionsSetGet> positionslistings=null;
+    public static ArrayList<GoodsSetGet> goodslistings=null;
+
+
+    public static  ArrayList<WhereListingsSetGet> whereListings=null;
+    public static  ArrayList<WhatListingsSetGet> whatListings=null;
+    public static  ArrayList<ReasonListingsSetGet> reasonListings=null;
+    public static ArrayList<PositionsListingsSetGet> positionsListings=null;
+    public static ArrayList<GoodsListingsSetGet> goodsListings=null;
+
       public  static ArrayList<PartnerListing> partnerListings=null;
+
+    //////////////////////////////////////////////////////////////////
+    public static String firsttimeservicerunning="false";
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
     public static ArrayList<ContactList_getset> contactarraylist;
+    public static ArrayList<ContactList_getset> arrayList;
+    public static ArrayList<NewContactList_getset> newContactList_getsets;
+
+
+    public  static  boolean buttonforseeingpartner=false;
+
     public  static  boolean addextabuttonforpartner=false;
 
-    public static ArrayList<PartnerSetGet> selectedcontact;
-    public static ArrayList<PartnerSetGet> selectedcontact2=new ArrayList<PartnerSetGet>();
-    public static ArrayList<ContactList_getset2> contactarraylistforfilter = new ArrayList<ContactList_getset2>();;
+    public static  boolean addextrabuttonforwhere=false;
+    public static boolean addextrabuttonforwhat=false;
+    public static boolean addextrabuttonforreason=false;
+    public static boolean addextrabuttonforpositions=false;
+    public static boolean addextrabuttonforgoods=false;
+    public static boolean selectp=false;
+
+    public static ArrayList<PartnerSetGet> selectedcontact ;
+    public static ArrayList<PartnerSetGet> selectedcontact2;
+    public static ArrayList<ContactList_getset2> contactarraylistforfilter = new ArrayList<ContactList_getset2>();
+
+    public static JSONArray partnerjsonarrayforaddinglist =new JSONArray();
+
 
     public static JSONArray partnerjsonarray =new JSONArray();
+
+
+    public static JSONArray wherejsonarray =new JSONArray();
+    public static  JSONArray whatjsonarray=new JSONArray();
+    public static JSONArray reasonjsonarray=new JSONArray();
+    public static JSONArray positionsjsonarray=new JSONArray();
+    public static JSONArray goodsjsonarray=new JSONArray();
 
     public static ArrayList<ContactList_getset> contactarraylistforfilter2;
 

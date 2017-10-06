@@ -177,7 +177,7 @@ public class SelectUserAdapter  extends RecyclerView.Adapter<SelectUserAdapter.V
                     holder.tick.setVisibility(View.INVISIBLE);
                     holder.background.setBackgroundResource(R.drawable.mold_dark_fade_blue_rectangle);
                     _data.get(position).setTouch(false);
-                    AppData.contactarraylist.get(position).setTouch(false);
+                    AppData.arrayList.get(position).setTouch(false);
 
                     activityPartner.partner_count--;
 
@@ -186,7 +186,7 @@ public class SelectUserAdapter  extends RecyclerView.Adapter<SelectUserAdapter.V
                     holder.tick.setVisibility(View.VISIBLE);
                     holder.background.setBackgroundResource(R.drawable.mold_blue_rectangle);
                     _data.get(position).setTouch(true);
-                    AppData.contactarraylist.get(position).setTouch(true);
+                    AppData.arrayList.get(position).setTouch(true);
 
                     activityPartner.partner_count++;
 

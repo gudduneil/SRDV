@@ -111,7 +111,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="40dp"
-                    android:hint="Select Date"
+                    android:text="Select Date"
                     android:textColorHint="#fff"
                     android:textColor="#fff"
                     android:textSize="15sp"
@@ -152,7 +152,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="40dp"
-                    android:hint="Time"
+                    android:text="Time"
                     android:textColorHint="#fff"
                     android:textColor="#fff"
                     android:textSize="15sp"
@@ -687,7 +687,7 @@
 
                 </RelativeLayout>
                 <LinearLayout
-                    android:id="@+id/partnerlinearlayout"
+                android:id="@+id/partnerlinearlayout"
                     android:visibility="visible"
                     android:layout_below="@+id/partnertxt"
                     android:paddingLeft="30dp"
@@ -743,6 +743,7 @@
 
 
         <LinearLayout
+            android:layout_marginTop="20dp"
             android:id="@+id/first_divider"
             android:visibility="invisible"
             android:layout_width="match_parent"
@@ -770,7 +771,7 @@
                     android:layout_below="@+id/wheretxt"
                     android:gravity="center_horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -784,13 +785,15 @@
 
                         >
                         <EditText
+                            android:id="@+id/wheresex"
+                            android:editable="false"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
                             android:paddingLeft="20dp"
                             android:gravity="top"
                             android:textSize="14sp"
                             android:textColor="#FFFFFF"
-                            android:text="m dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur"
+                            android:text=""
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/mold_style"/>
@@ -806,7 +809,7 @@
                     <View
                         android:id="@+id/view_where"
                         android:layout_below="@+id/ll_edtwhere"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="20dp"/>
                     <LinearLayout
                         android:layout_below="@+id/view_where"
@@ -843,6 +846,7 @@
 
                 </RelativeLayout>
                 <LinearLayout
+                    android:id="@+id/wherelinearlayout"
                     android:visibility="visible"
                     android:layout_below="@+id/wheretxt"
                     android:paddingLeft="30dp"
@@ -851,6 +855,7 @@
                     android:layout_height="40dp">
 
                     <RelativeLayout
+                        android:id="@+id/wherecylinder"
 
                         android:layout_width="match_parent"
                         android:background="@drawable/mold_style"
@@ -901,6 +906,7 @@
 
 
             <LinearLayout
+                android:layout_marginTop="20dp"
                 android:visibility="invisible"
                 android:id="@+id/second_divider"
                 android:layout_width="match_parent"
@@ -937,7 +943,7 @@
                     android:layout_below="@+id/whattxt"
                     android:gravity="center_horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -951,16 +957,18 @@
 
                         >
                         <EditText
+                            android:id="@+id/whatsex"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
                             android:paddingLeft="20dp"
                             android:gravity="top"
                             android:textSize="14sp"
                             android:textColor="#FFFFFF"
-                            android:text="Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur"
+                            android:text=""
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/mold_style"/>
+                            android:background="@drawable/mold_style"
+                            android:editable="false"/>
 
 
 
@@ -1010,6 +1018,7 @@
 
                 </RelativeLayout>
                 <LinearLayout
+                    android:id="@+id/whatlinearlayout"
                     android:visibility="visible"
                     android:layout_below="@+id/whattxt"
                     android:paddingLeft="30dp"
@@ -1018,6 +1027,7 @@
                     android:layout_height="40dp">
 
                     <RelativeLayout
+                        android:id="@+id/whatcylinder"
 
                         android:layout_width="match_parent"
                         android:background="@drawable/mold_style"
@@ -1067,6 +1077,7 @@
 
 
              <LinearLayout
+               android:layout_marginTop="20dp"
             android:id="@+id/third_divider"
             android:visibility="invisible"
             android:layout_width="match_parent"
@@ -1095,7 +1106,7 @@
                     android:layout_below="@+id/reasontxt"
                     android:gravity="center_horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -1109,13 +1120,15 @@
 
                         >
                         <EditText
+                            android:id="@+id/reasonsex"
+                            android:editable="false"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
                             android:paddingLeft="20dp"
                             android:gravity="top"
                             android:textSize="14sp"
                             android:textColor="#FFFFFF"
-                            android:text="Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur"
+                            android:text=""
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/mold_style"/>
@@ -1168,6 +1181,7 @@
 
                 </RelativeLayout>
                 <LinearLayout
+                    android:id="@+id/reasonlinearlayout"
                     android:visibility="visible"
                     android:layout_below="@+id/reasontxt"
                     android:paddingLeft="30dp"
@@ -1176,6 +1190,7 @@
                     android:layout_height="40dp">
 
                     <RelativeLayout
+                        android:id="@+id/reasoncylinder"
 
                         android:layout_width="match_parent"
                         android:background="@drawable/mold_style"
@@ -1218,10 +1233,13 @@
 
 
                 </LinearLayout>
+
+
             </RelativeLayout>
     ///////////////////////////////////////////////////////////////
 
             <LinearLayout
+  android:layout_marginTop="20dp"
                 android:id="@+id/forth_divider"
                 android:visibility="invisible"
                 android:layout_width="match_parent"
@@ -1250,7 +1268,7 @@
                     android:layout_below="@+id/positiontxt"
                     android:gravity="center_horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -1264,13 +1282,15 @@
 
                         >
                         <EditText
+                            android:editable="false"
+                            android:id="@+id/positionssex"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
                             android:paddingLeft="20dp"
                             android:gravity="top"
                             android:textSize="14sp"
                             android:textColor="#FFFFFF"
-                            android:text="Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur"
+                            android:text=""
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/mold_style"/>
@@ -1323,6 +1343,7 @@
 
                 </RelativeLayout>
                 <LinearLayout
+                    android:id="@+id/positionslinearlayout"
                     android:visibility="visible"
                     android:layout_below="@+id/positiontxt"
                     android:paddingLeft="30dp"
@@ -1331,6 +1352,7 @@
                     android:layout_height="40dp">
 
                     <RelativeLayout
+                        android:id="@+id/positionscylinder"
 
                         android:layout_width="match_parent"
                         android:background="@drawable/mold_style"
@@ -1373,10 +1395,19 @@
 
 
                 </LinearLayout>
+                <ProgressBar
+                    android:visibility="visible"
+
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/pbar"
+                    android:layout_centerInParent="true"
+                    />
             </RelativeLayout>
 
 
             <LinearLayout
+          android:layout_marginTop="20dp"
                 android:id="@+id/fifth_divider"
                 android:visibility="invisible"
                 android:layout_width="match_parent"
@@ -1408,7 +1439,7 @@
                     android:layout_below="@+id/goodstxt"
                     android:gravity="center_horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <LinearLayout
@@ -1422,13 +1453,15 @@
 
                         >
                         <EditText
+                          android:id="@+id/goodssex"
+                            android:editable="false"
                             android:paddingTop="10dp"
                             android:paddingBottom="10dp"
                             android:paddingLeft="20dp"
                             android:gravity="top"
                             android:textSize="14sp"
                             android:textColor="#FFFFFF"
-                            android:text="Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet, consectetur"
+                            android:text=""
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="@drawable/mold_style"/>
@@ -1481,6 +1514,7 @@
 
                 </RelativeLayout>
                 <LinearLayout
+                    android:id="@+id/goodslinearlayout"
                     android:visibility="visible"
                     android:layout_below="@+id/goodstxt"
                     android:paddingLeft="30dp"
@@ -1489,6 +1523,7 @@
                     android:layout_height="40dp">
 
                     <RelativeLayout
+                        android:id="@+id/goodscylinder"
 
                         android:layout_width="match_parent"
                         android:background="@drawable/mold_style"

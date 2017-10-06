@@ -37,19 +37,21 @@
                 android:orientation="vertical"
                 android:weightSum="1">
                 <TextView
+                    android:id="@+id/start_time"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight=".5"
-                    android:text="20:00"
+                    android:text=""
                     android:gravity="center"
                     android:textSize="16sp"
                     android:textColor="#E1187A"/>
                 <TextView
+                    android:id="@+id/end_time"
                     android:textSize="12sp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight=".5"
-                    android:text="-22:00"
+                    android:text=""
                     android:gravity="center_horizontal"
                     android:textColor="#767998"/>
 
@@ -73,19 +75,21 @@
 
 
                 <TextView
+                    android:id="@+id/day"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight=".5"
-                    android:text="Friday"
+                    android:text=""
                     android:gravity="center"
                     android:textSize="16sp"
                     android:textColor="#FFF"/>
                 <TextView
+                    android:id="@+id/date"
                     android:textSize="12sp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight=".5"
-                    android:text="17.03.2017"
+                    android:text=""
                     android:gravity="center_horizontal"
                     android:textColor="#767998"/>
 
@@ -105,20 +109,22 @@
                 android:orientation="vertical"
                 android:weightSum="1">
                 <TextView
+                    android:id="@+id/partner"
                     android:singleLine="true"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight=".5"
-                    android:text="Romeo, Juliet"
+                    android:text=""
                     android:gravity="center"
                     android:textSize="12sp"
                     android:textColor="#FFF"/>
                 <TextView
+                    android:id="@+id/place"
                     android:textSize="12sp"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight=".5"
-                    android:text="Garden"
+                    android:text=""
                     android:gravity="center_horizontal"
                     android:textColor="#767998"/>
 

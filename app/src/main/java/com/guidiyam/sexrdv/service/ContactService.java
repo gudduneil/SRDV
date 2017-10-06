@@ -5,6 +5,7 @@ import android.app.Service;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.IBinder;
@@ -12,6 +13,7 @@ import android.provider.ContactsContract;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.guidiyam.sexrdv.helper.Utils;
 import com.guidiyam.sexrdv.setget.ContactList_getset;
 ;
@@ -30,6 +32,7 @@ public class ContactService extends Service {
     Context ctx;
     Cursor phones;
     String number,image_thumb;
+    SharedPreferences.Editor contacteditor;
     ContentResolver resolver;
     public static final String ACTION_ON = "com.guidiyam.sexrdv.ContactService.ACTION_START";
     public static final String ACTION_KILL = "com.guidiyam.sexrdv.ContactService.ACTION_KILL";
@@ -78,14 +81,16 @@ public class ContactService extends Service {
 
 
     public void killMe() {
+        //Toast.makeText(ctx, "Kill me fuction is called", Toast.LENGTH_SHORT).show();
         stopForeground(true);
         stopSelf();
     }
     public void create_contact()
     {
 
-        Toast.makeText(ctx,"Contact Service is called",Toast.LENGTH_SHORT).show();
+        //Toast.makeText(ctx,"Contact Service is called",Toast.LENGTH_SHORT).show();
         AppData.contactarraylist = new ArrayList<ContactList_getset>();
+        AppData.contactarraylist.clear();
 
         //AppData.contactarraylistforfilter = new ArrayList<ContactList_getset>();
 
@@ -165,19 +170,23 @@ public class ContactService extends Service {
 
 
                     }
-                    ContactList_getset obj=new ContactList_getset(name,number,image,Email,false);
-                    AppData.contactarraylist.add(obj);
-//
-//                    ContactList_getset2 obj2=new ContactList_getset2(name,number,image,Email,false);
-//                    AppData.contactarraylistforfilter.add(obj2);
+                    if(!number.equals("") || !Email.equals(""))
+                    {
 
 
+                        ContactList_getset obj=new ContactList_getset(name,number,image,Email,false);
+                        AppData.contactarraylist.add(obj);
 
-                   // AppData.contactarraylistforfilter.add(obj);
+                        Gson gson = new Gson();
+                        String jsoncontactlist = gson.toJson( AppData.contactarraylist);
+                        contacteditor = getSharedPreferences("shareprefcontactlist", MODE_PRIVATE).edit();
+                        contacteditor.putString("contactlist", jsoncontactlist);
+                        contacteditor.commit();
 
-                   // AppData.contactarraylistforfilter.add(obj);
 
-                    Log.d("ArrayList::::","Name: "+obj.getName()+" number: "+obj.getNumber()+" image: "+obj.getImage()+" email: "+obj.getEmail());
+                        Log.d("ArrayList::::","Name: "+obj.getName()+" number: "+obj.getNumber()+" image: "+obj.getImage()+" email: "+obj.getEmail());
+                    }
+
                 }
                 //phones.close();
                 //ContactFetchM();
@@ -198,6 +207,12 @@ public class ContactService extends Service {
 
             //Toast.makeText(ctx,"onpost execute block is called",Toast.LENGTH_SHORT).show();
             AppData.isServiceCompleted=true;
+
+            /////////////////////////////////
+
+
+
+
 
 
 //            else if(status1==false)
